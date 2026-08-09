@@ -3,6 +3,7 @@
 
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#primary-navigation');
+  const header = document.querySelector('.site-header');
   const closeMenu = () => {
     toggle?.setAttribute('aria-expanded', 'false');
     nav?.removeAttribute('data-open');
@@ -17,12 +18,19 @@
   nav?.addEventListener('click', (event) => {
     if (event.target.closest('a')) closeMenu();
   });
+  document.addEventListener('click', (event) => {
+    if (nav?.hasAttribute('data-open') && !header?.contains(event.target)) closeMenu();
+  });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeMenu();
       toggle?.focus();
     }
   });
+
+  const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, { passive: true });
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
