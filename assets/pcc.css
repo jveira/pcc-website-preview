@@ -179,7 +179,7 @@ p.meta a, .meta.underlink { display: inline-block; padding: 14px 0; margin: -14p
 
 /* ---------- Year tables (Impact / Transparency) ---------- */
 .year-table-wrap { overflow-x: auto; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.year-table { min-width: 760px; }
+.year-table { min-width: 760px; width: 100%; }
 .year-table--wide { min-width: 820px; }
 .year-table th { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--meta); font-weight: 400; text-align: left; padding: 11px 16px; border-bottom: 1px solid var(--hairline); }
 .year-table th:first-child, .year-table td:first-child { padding-left: var(--gutter); }
