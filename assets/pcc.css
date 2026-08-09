@@ -219,6 +219,72 @@ p.meta a, .meta.underlink { display: inline-block; padding: 14px 0; margin: -14p
 /* ---------- Donorbox ---------- */
 .donorbox-frame { max-width: 500px; width: 100%; border: 1px solid var(--hairline); min-height: 900px; }
 
+/* ================= Home v2 — Colombian editorial (docs/home-visual-direction.md)
+   Owner-directed reset, Home only. Yellow = expressive lead, blue = evidence,
+   red = action-only. No tricolor bands. All pairings AA-checked. ================= */
+:root {
+  --sol: #FCD116;       /* yellow — expressive; ink text only (13.9:1) */
+  --sol-tint: #FFF6D6;
+  --mar: #003893;       /* blue — evidence; white text (12.6:1) */
+  --mar-tint: #EDF2FB;
+  --rojo: #CE1126;      /* red — action only; white text (5.9:1 AA) */
+}
+.h-display { font-size: clamp(34px, 5vw, 72px); letter-spacing: -0.035em; line-height: 0.98; }
+.h2-hero { position: relative; }
+.h2-hero .frame { position: relative; aspect-ratio: 21 / 10; }
+.h2-caption {
+  display: flex; justify-content: space-between; gap: 10px 24px; flex-wrap: wrap;
+  padding: 10px var(--gutter); border-bottom: 1px solid var(--hairline);
+}
+.h2-panel {
+  background: var(--sol); color: var(--ink);
+  max-width: min(720px, 92%); margin: clamp(-96px, -8vw, -48px) 0 0 var(--gutter);
+  position: relative; z-index: 2; padding: clamp(24px, 3.4vw, 48px);
+}
+.h2-panel .actions { display: flex; flex-wrap: wrap; gap: 14px 26px; align-items: center; margin-top: 26px; }
+.h2-panel .btn { background: var(--ink); color: var(--sol); }
+.h2-role { padding: clamp(40px, 6vw, 88px) var(--gutter) clamp(28px, 4vw, 56px); max-width: 1060px; }
+.h2-role .kicker { color: var(--meta); }
+.h2-role h2 { font-size: clamp(26px, 3.2vw, 46px); max-width: 24ch; margin-top: 14px; }
+.h2-role .body-text { margin-top: 20px; max-width: 62ch; font-size: 16px; }
+.band-blue { background: var(--mar); color: #FFFFFF; padding: clamp(36px, 5vw, 72px) var(--gutter); }
+.band-blue a { color: inherit; }
+.band-blue .lead-line { font-size: clamp(22px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.03em; max-width: 30ch; line-height: 1.15; }
+.band-blue .stats { display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 64px); margin-top: clamp(28px, 4vw, 48px); }
+.band-blue .stat { flex: 1 1 180px; min-width: 150px; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 14px; }
+.band-blue .stat .num { font-size: clamp(38px, 4.2vw, 62px); font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+.band-blue .stat .lbl { margin-top: 8px; }
+.band-blue .stat .src { margin-top: 6px; font-size: 13px; color: rgba(255,255,255,0.75); }
+.band-blue .paths { display: flex; flex-wrap: wrap; gap: 12px 30px; margin-top: clamp(28px, 4vw, 44px); border-top: 1px solid rgba(255,255,255,0.3); padding-top: 18px; }
+.band-blue .underlink:hover { color: rgba(255,255,255,0.75); }
+.h2-prog { display: flex; flex-wrap: wrap; gap: 0; align-items: stretch; }
+.h2-prog + .h2-prog { border-top: 1px solid var(--hairline); }
+.h2-prog .photo { flex: 3 1 520px; min-width: min(100%, 320px); position: relative; }
+.h2-prog .photo .frame { position: relative; aspect-ratio: 16 / 10; }
+.h2-prog .text { flex: 2 1 340px; min-width: min(100%, 300px); display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 4vw, 56px) var(--gutter); }
+.h2-prog .text .accent { width: 44px; height: 6px; background: var(--sol); margin-bottom: 20px; }
+.h2-prog h3 { font-size: clamp(28px, 3vw, 44px); }
+.h2-prog .local { margin-top: 8px; font-size: clamp(16px, 1.5vw, 19px); color: var(--secondary); letter-spacing: -0.01em; }
+.h2-prog .summary { margin-top: 14px; font-size: 15px; max-width: 46ch; }
+.quote-band { background: var(--sol-tint); padding: clamp(44px, 6vw, 88px) var(--gutter); }
+.quote-band blockquote { margin: 0; max-width: 860px; }
+.quote-band .q { font-size: clamp(26px, 3.4vw, 50px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; }
+.quote-band .q .tr { color: var(--secondary); font-weight: 400; font-size: clamp(18px, 2vw, 26px); letter-spacing: -0.01em; }
+.quote-band figcaption { margin-top: 18px; }
+.h2-support { display: flex; flex-wrap: wrap; border-top: 1px solid var(--ink); }
+.h2-support .ask { flex: 1 1 460px; min-width: min(100%, 320px); padding: clamp(36px, 5vw, 72px) var(--gutter); }
+.h2-support .ask .rule { width: 44px; height: 6px; background: var(--rojo); margin-bottom: 20px; }
+.h2-support h2 { font-size: clamp(26px, 3vw, 44px); max-width: 20ch; }
+.btn-donate { background: var(--rojo); color: #FFFFFF; }
+.btn-donate:hover { background: #A50D1E; color: #FFFFFF; }
+.h2-support .photo { flex: 1 1 340px; min-width: min(100%, 280px); position: relative; min-height: 260px; }
+@media (max-width: 859px) {
+  .h2-hero .frame { aspect-ratio: 4 / 3; }
+  .h2-panel { margin: 0; max-width: 100%; }
+  .h2-prog .text { order: 0 !important; }
+  .h2-prog .photo { order: 1 !important; }
+}
+
 /* ---------- Responsive (frozen rules: 1280+ / 860–1279 / <860) ---------- */
 @media (max-width: 859px) {
   /* Image-first single column; density survives — nothing hidden */
