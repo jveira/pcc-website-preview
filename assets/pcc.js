@@ -98,6 +98,9 @@
       for (const control of scopeControls) {
         if (control.dataset.scopeControl === scope) control.setAttribute('aria-current', 'true');
         else control.removeAttribute('aria-current');
+        const url = new URL(control.href, window.location.href);
+        url.searchParams.set('year', year);
+        control.href = `${url.pathname}${url.search}${url.hash}`;
       }
       for (const control of yearControls) {
         if (control.dataset.yearControl === year) control.setAttribute('aria-current', 'true');
@@ -137,6 +140,21 @@
     window.addEventListener('popstate', () => render(readState(), true));
     archive?.removeAttribute('open');
     render(readState());
+  });
+
+  document.querySelectorAll('.context-strip').forEach((strip) => {
+    const links = [...strip.querySelectorAll('a[href^="#"]')];
+    if (!links.length) return;
+    const syncContext = () => {
+      const hash = window.location.hash;
+      links.forEach((link, index) => {
+        const current = hash ? link.hash === hash : index === 0;
+        if (current) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    window.addEventListener('hashchange', syncContext);
+    syncContext();
   });
 
   if (reducedMotion) return;
