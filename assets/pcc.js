@@ -28,15 +28,26 @@
     }
   });
 
-  const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+  let headerFrame = 0;
+  const syncHeader = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 12);
+    headerFrame = 0;
+  };
+  const requestHeaderSync = () => {
+    if (!headerFrame) headerFrame = window.requestAnimationFrame(syncHeader);
+  };
   syncHeader();
-  window.addEventListener('scroll', syncHeader, { passive: true });
+  window.addEventListener('scroll', requestHeaderSync, { passive: true });
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const reveals = [...document.querySelectorAll('.reveal')];
+  const reveals = [...document.querySelectorAll('.reveal, .media-reveal')];
   if (!reveals.length || !('IntersectionObserver' in window)) return;
 
+  for (const element of reveals) {
+    const bounds = element.getBoundingClientRect();
+    if (bounds.top < window.innerHeight * .92 && bounds.bottom > 0) element.classList.add('is-visible');
+  }
   document.documentElement.classList.add('motion-ready');
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -46,5 +57,7 @@
     }
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
-  for (const element of reveals) observer.observe(element);
+  for (const element of reveals) {
+    if (!element.classList.contains('is-visible')) observer.observe(element);
+  }
 })();
