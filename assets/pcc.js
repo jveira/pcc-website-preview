@@ -55,6 +55,15 @@
       });
     });
   };
+  const finishClose = (restoreFocus) => {
+    toggle?.setAttribute('aria-expanded', 'false');
+    nav?.removeAttribute('data-open');
+    nav?.classList.remove('is-closing');
+    programMenu?.removeAttribute('open');
+    document.documentElement.classList.remove('menu-open');
+    if (menuLabel) menuLabel.textContent = 'Menu';
+    if (restoreFocus) toggle?.focus();
+  };
   const closeMenu = (restoreFocus = false) => {
     const wasOpen = nav?.hasAttribute('data-open');
     toggle?.setAttribute('aria-expanded', 'false');
@@ -107,9 +116,30 @@
     if (window.innerWidth >= 860 && nav?.hasAttribute('data-open')) closeMenu();
   });
 
+  const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const dockEl = document.querySelector('[data-mobile-dock]');
+  let lastY = window.scrollY;
+  let progressEl = null;
+  if (document.querySelector('.letter-layout') && header) {
+    progressEl = document.createElement('div');
+    progressEl.className = 'read-progress';
+    progressEl.setAttribute('aria-hidden', 'true');
+    header.appendChild(progressEl);
+  }
   let headerFrame = 0;
   const syncHeader = () => {
-    header?.classList.toggle('is-scrolled', window.scrollY > 12);
+    const y = window.scrollY;
+    header?.classList.toggle('is-scrolled', y > 12);
+    if (dockEl && !prefersReduce.matches && !dockEl.matches(':focus-within')) {
+      const delta = y - lastY;
+      if (y < 320 || delta < -6) dockEl.classList.remove('is-scrolled-away');
+      else if (delta > 6) dockEl.classList.add('is-scrolled-away');
+    }
+    if (progressEl) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progressEl.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
+    }
+    lastY = y;
     headerFrame = 0;
   };
   const requestHeaderSync = () => {
@@ -149,6 +179,29 @@
     const archive = explorer.querySelector('.evidence-archive');
     const scopes = new Set(panels.map((panel) => panel.dataset.scope || 'all'));
     const years = new Set(panels.map((panel) => panel.dataset.year));
+    const panelsWrap = explorer.querySelector('.evidence-panels');
+    const thumbs = [];
+    for (const tabsNav of explorer.querySelectorAll('.scope-tabs, .year-tabs')) {
+      const thumb = document.createElement('span');
+      thumb.className = 'tab-thumb';
+      thumb.setAttribute('aria-hidden', 'true');
+      tabsNav.appendChild(thumb);
+      tabsNav.classList.add('has-thumb');
+      thumbs.push({ tabsNav, thumb });
+    }
+    const syncThumbs = () => {
+      for (const { tabsNav, thumb } of thumbs) {
+        const active = tabsNav.querySelector('a[aria-current]');
+        if (!active) continue;
+        thumb.style.width = `${active.offsetWidth}px`;
+        thumb.style.transform = `translate3d(${active.offsetLeft}px,0,0)`;
+      }
+    };
+    window.addEventListener('resize', syncThumbs);
+    window.setTimeout(() => {
+      syncThumbs();
+      if (!reducedMotion) thumbs.forEach(({ thumb }) => thumb.classList.add('is-ready'));
+    }, 0);
 
     const readState = () => {
       const params = new URLSearchParams(window.location.search);
@@ -162,6 +215,8 @@
 
     const render = ({ scope, year }, announce = false) => {
       let selected;
+      const liquid = announce && panelsWrap && !reducedMotion;
+      const startHeight = liquid ? panelsWrap.offsetHeight : 0;
       for (const panel of panels) {
         const matches = (panel.dataset.scope || 'all') === scope && panel.dataset.year === year;
         panel.hidden = !matches;
@@ -185,8 +240,24 @@
         const scopeName = scopeControls.find((control) => control.dataset.scopeControl === scope)?.textContent.trim();
         status.textContent = announce ? (scopeName ? `Showing ${scopeName}, ${year}.` : `Showing ${year}.`) : '';
       }
+      if (liquid) {
+        const endHeight = panelsWrap.offsetHeight;
+        if (Math.abs(endHeight - startHeight) > 2) {
+          panelsWrap.style.height = `${startHeight}px`;
+          panelsWrap.classList.add('is-resizing');
+          void panelsWrap.offsetHeight;
+          panelsWrap.style.height = `${endHeight}px`;
+          window.setTimeout(() => {
+            panelsWrap.classList.remove('is-resizing');
+            panelsWrap.style.height = '';
+          }, 300);
+        }
+      }
+      syncThumbs();
       if (announce && selected && !reducedMotion) {
-        selected.animate([{ transform: 'translate3d(0,8px,0)' }, { transform: 'none' }], { duration: 220, easing: 'cubic-bezier(.16,1,.3,1)' });
+        selected.animate(
+          [{ opacity: .35, transform: 'translate3d(0,8px,0)' }, { opacity: 1, transform: 'none' }],
+          { duration: 240, easing: 'cubic-bezier(.16,1,.3,1)' });
       }
     };
 
