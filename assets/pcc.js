@@ -10,27 +10,19 @@
   }
   document.documentElement.classList.add('enhanced');
 
-  const programSlugs = new Set(['alpha-fc', 'caminos-nativos', 'mas-que-vencedores']);
-  const programSlugFromPath = (pathname) => {
-    const match = pathname.match(/^\/programs\/([^/]+)\/?$/);
-    return match && programSlugs.has(match[1]) ? match[1] : '';
-  };
-  const currentProgramSlug = programSlugFromPath(window.location.pathname);
-  if (currentProgramSlug) document.documentElement.dataset.programTransition = currentProgramSlug;
-  const prepareProgramTransition = (targetUrl) => {
-    const target = new URL(targetUrl, window.location.href);
-    const targetSlug = target.origin === window.location.origin ? programSlugFromPath(target.pathname) : '';
-    const isProgramOrigin = window.location.pathname === '/' || window.location.pathname === '/programs/';
-    if (isProgramOrigin && targetSlug) document.documentElement.dataset.programTransition = targetSlug;
-    else delete document.documentElement.dataset.programTransition;
-  };
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href]');
-    if (link) prepareProgramTransition(link.href);
+    if (!link?.matches('.mobile-dock-link')) return;
+    const target = new URL(link.href, window.location.href);
+    if (target.origin !== window.location.origin) return;
+    link.classList.add('is-navigating');
+    link.setAttribute('aria-busy', 'true');
   }, { capture: true });
-  window.addEventListener('pageswap', (event) => {
-    const targetUrl = event.activation?.entry?.url;
-    if (targetUrl) prepareProgramTransition(targetUrl);
+  window.addEventListener('pageshow', () => {
+    document.querySelectorAll('.mobile-dock-link.is-navigating').forEach((link) => {
+      link.classList.remove('is-navigating');
+      link.removeAttribute('aria-busy');
+    });
   });
 
   const toggle = document.querySelector('.menu-toggle');
@@ -134,12 +126,17 @@
     }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
     dockObserver.observe(footer);
   }
-  const dockOcclusion = document.querySelector('[data-dock-occlusion]');
-  if (mobileDock && dockOcclusion && 'IntersectionObserver' in window) {
-    const actionObserver = new IntersectionObserver(([entry]) => {
-      mobileDock.classList.toggle('is-over-local-actions', entry.isIntersecting);
+  const dockOcclusions = [...document.querySelectorAll('[data-dock-occlusion]')];
+  if (mobileDock && dockOcclusions.length && 'IntersectionObserver' in window) {
+    const visibleOcclusions = new Set();
+    const actionObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) visibleOcclusions.add(entry.target);
+        else visibleOcclusions.delete(entry.target);
+      }
+      mobileDock.classList.toggle('is-over-local-actions', visibleOcclusions.size > 0);
     }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
-    actionObserver.observe(dockOcclusion);
+    dockOcclusions.forEach((element) => actionObserver.observe(element));
   }
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -236,7 +233,7 @@
       }
     };
     const syncContext = () => {
-      const threshold = window.innerWidth < 860 ? 116 : 24;
+      const threshold = window.innerWidth < 860 ? 116 : 130;
       let next = links[0];
       for (const link of links) {
         const target = document.querySelector(link.hash);
