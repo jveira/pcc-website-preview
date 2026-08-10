@@ -265,6 +265,9 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 /* ---------- Photography ---------- */
 .img-slot > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .img-slot.has-img { background: var(--ink); }
+.home-program-photo > .img-slot,
+.program-card-media > .img-slot,
+.masthead-media > a > .img-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
 .home-program .img-slot > img, .home-support .img-slot > img { transition: transform .7s var(--motion-ease); }
 .home-program:focus-within .img-slot > img, .home-support:focus-within .img-slot > img { transform: scale(1.02); }
 @media (hover: hover) and (pointer: fine) {
