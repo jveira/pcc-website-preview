@@ -134,6 +134,13 @@
     }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
     dockObserver.observe(footer);
   }
+  const dockOcclusion = document.querySelector('[data-dock-occlusion]');
+  if (mobileDock && dockOcclusion && 'IntersectionObserver' in window) {
+    const actionObserver = new IntersectionObserver(([entry]) => {
+      mobileDock.classList.toggle('is-over-local-actions', entry.isIntersecting);
+    }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
+    actionObserver.observe(dockOcclusion);
+  }
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
