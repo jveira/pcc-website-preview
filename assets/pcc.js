@@ -1,5 +1,37 @@
 (() => {
+  if (window.location.hash) {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.requestAnimationFrame(() => {
+      let target;
+      try { target = document.getElementById(decodeURIComponent(window.location.hash.slice(1))); } catch {}
+      target?.scrollIntoView();
+      window.requestAnimationFrame(() => document.documentElement.style.removeProperty('scroll-behavior'));
+    });
+  }
   document.documentElement.classList.add('enhanced');
+
+  const programSlugs = new Set(['alpha-fc', 'caminos-nativos', 'mas-que-vencedores']);
+  const programSlugFromPath = (pathname) => {
+    const match = pathname.match(/^\/programs\/([^/]+)\/?$/);
+    return match && programSlugs.has(match[1]) ? match[1] : '';
+  };
+  const currentProgramSlug = programSlugFromPath(window.location.pathname);
+  if (currentProgramSlug) document.documentElement.dataset.programTransition = currentProgramSlug;
+  const prepareProgramTransition = (targetUrl) => {
+    const target = new URL(targetUrl, window.location.href);
+    const targetSlug = target.origin === window.location.origin ? programSlugFromPath(target.pathname) : '';
+    const isProgramOrigin = window.location.pathname === '/' || window.location.pathname === '/programs/';
+    if (isProgramOrigin && targetSlug) document.documentElement.dataset.programTransition = targetSlug;
+    else delete document.documentElement.dataset.programTransition;
+  };
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (link) prepareProgramTransition(link.href);
+  }, { capture: true });
+  window.addEventListener('pageswap', (event) => {
+    const targetUrl = event.activation?.entry?.url;
+    if (targetUrl) prepareProgramTransition(targetUrl);
+  });
 
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#primary-navigation');
@@ -7,11 +39,37 @@
   const programMenu = document.querySelector('[data-program-menu]');
   const programSummary = programMenu?.querySelector('summary');
   const menuLabel = toggle?.querySelector('[data-menu-label]');
+  let menuScrollY = 0;
+  const lockPage = () => {
+    menuScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${menuScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  };
+  const unlockPage = () => {
+    document.body.style.removeProperty('position');
+    document.body.style.removeProperty('top');
+    document.body.style.removeProperty('left');
+    document.body.style.removeProperty('right');
+    document.body.style.removeProperty('width');
+    const scrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.requestAnimationFrame(() => {
+      window.scrollTo(0, menuScrollY);
+      window.requestAnimationFrame(() => {
+        document.documentElement.style.scrollBehavior = scrollBehavior;
+      });
+    });
+  };
   const closeMenu = (restoreFocus = false) => {
+    const wasOpen = nav?.hasAttribute('data-open');
     toggle?.setAttribute('aria-expanded', 'false');
     nav?.removeAttribute('data-open');
     programMenu?.removeAttribute('open');
     document.documentElement.classList.remove('menu-open');
+    if (wasOpen) unlockPage();
     if (menuLabel) menuLabel.textContent = 'Menu';
     if (restoreFocus) toggle?.focus();
   };
@@ -20,6 +78,7 @@
     const open = toggle.getAttribute('aria-expanded') !== 'true';
     toggle.setAttribute('aria-expanded', String(open));
     if (open) {
+      lockPage();
       nav?.setAttribute('data-open', 'true');
       document.documentElement.classList.add('menu-open');
       if (menuLabel) menuLabel.textContent = 'Close';
@@ -66,6 +125,15 @@
   };
   syncHeader();
   window.addEventListener('scroll', requestHeaderSync, { passive: true });
+
+  const mobileDock = document.querySelector('[data-mobile-dock]');
+  const footer = document.querySelector('.site-footer');
+  if (mobileDock && footer && 'IntersectionObserver' in window) {
+    const dockObserver = new IntersectionObserver(([entry]) => {
+      mobileDock.classList.toggle('is-near-footer', entry.isIntersecting);
+    }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
+    dockObserver.observe(footer);
+  }
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -142,19 +210,66 @@
     render(readState());
   });
 
-  document.querySelectorAll('.context-strip').forEach((strip) => {
+  document.querySelectorAll('[data-local-navigation]').forEach((strip) => {
     const links = [...strip.querySelectorAll('a[href^="#"]')];
     if (!links.length) return;
-    const syncContext = () => {
-      const hash = window.location.hash;
-      links.forEach((link, index) => {
-        const current = hash ? link.hash === hash : index === 0;
-        if (current) link.setAttribute('aria-current', 'location');
+    let activeLink;
+    let contextFrame = 0;
+    const setCurrent = (next) => {
+      if (!next || next === activeLink) return;
+      activeLink = next;
+      links.forEach((link) => {
+        if (link === next) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
+      if (window.innerWidth < 860) {
+        const label = strip.querySelector('.context-label');
+        const left = next === label ? 0 : Math.max(0, next.offsetLeft - (label?.offsetWidth || 0) - 12);
+        strip.scrollTo({ left, behavior: reducedMotion ? 'auto' : 'smooth' });
+      }
     };
-    window.addEventListener('hashchange', syncContext);
+    const syncContext = () => {
+      const threshold = window.innerWidth < 860 ? 116 : 24;
+      let next = links[0];
+      for (const link of links) {
+        const target = document.querySelector(link.hash);
+        if (target && target.getBoundingClientRect().top <= threshold) next = link;
+      }
+      const hashLink = links.find((link) => link.hash === window.location.hash);
+      const hashTarget = hashLink && document.querySelector(hashLink.hash);
+      if (hashTarget && hashTarget.getBoundingClientRect().top <= threshold + 24) next = hashLink;
+      setCurrent(next);
+    };
+    const requestContextSync = () => {
+      if (contextFrame) return;
+      contextFrame = window.requestAnimationFrame(() => {
+        syncContext();
+        contextFrame = 0;
+      });
+    };
+    window.addEventListener('hashchange', requestContextSync);
+    window.addEventListener('scroll', requestContextSync, { passive: true });
+    window.addEventListener('resize', requestContextSync);
     syncContext();
+    window.requestAnimationFrame(syncContext);
+  });
+
+  const compactContent = window.matchMedia('(max-width: 699px)');
+  const criteriaDisclosure = document.querySelector('.criteria-disclosure');
+  const syncCompactContent = () => {
+    const values = document.querySelectorAll('.value-item');
+    if (compactContent.matches) {
+      values.forEach((item) => item.removeAttribute('open'));
+      if (criteriaDisclosure && window.location.hash !== '#partner-criteria') criteriaDisclosure.removeAttribute('open');
+      return;
+    }
+    values.forEach((item) => item.setAttribute('open', ''));
+    criteriaDisclosure?.setAttribute('open', '');
+  };
+  syncCompactContent();
+  compactContent.addEventListener('change', syncCompactContent);
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#partner-criteria') criteriaDisclosure?.setAttribute('open', '');
   });
 
   if (reducedMotion) return;
