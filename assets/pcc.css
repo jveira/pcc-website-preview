@@ -1168,7 +1168,11 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 .notice-band .notice-body { flex: 1 1 420px; min-width: min(100%, 300px); margin: 0; font-size: 14px; line-height: 1.55; color: var(--body); max-width: 88ch; }
 
 /* ---------- Language toggle ---------- */
-.lang-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 10px; font: 600 13px/1 var(--font-sans); letter-spacing: .02em; border-radius: 999px; }
+.lang-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 44px; min-height: 44px; padding: 0 11px; font: 600 12px/1 var(--font-sans); letter-spacing: .02em; border-radius: 999px; white-space: nowrap; }
+.lang-option { display: inline-flex; align-items: center; gap: 4px; opacity: .58; transition: opacity .2s ease, color .2s ease; }
+.lang-option.is-current { opacity: 1; color: var(--ink); }
+.lang-flag { font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif; font-size: 15px; line-height: 1; }
+.lang-divider { color: var(--muted); opacity: .7; }
 .lang-toggle:hover, .lang-toggle:focus-visible { background: var(--sol-tint); color: var(--ink); }
 .site-nav .lang-toggle { align-self: center; margin: 0 4px; }
 .mobile-header-actions { display: flex; align-items: center; gap: 2px; }
