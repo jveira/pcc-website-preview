@@ -1161,3 +1161,15 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   .site-header, .site-header.is-scrolled, .enhanced .menu-toggle, .mobile-dock-link, .context-strip--local { background: #FFFFFF; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .mobile-dock-donate { background: var(--rojo); }
 }
+
+/* ---------- Notice band (temporary; controlled by data/content/notice.json) ---------- */
+.notice-band { display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: baseline; padding: 16px var(--gutter); border-bottom: 1px solid var(--ink); background: var(--sol-tint); }
+.notice-band .notice-label { flex: 0 0 auto; font: 600 12px/1.5 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rojo); }
+.notice-band .notice-body { flex: 1 1 420px; min-width: min(100%, 300px); margin: 0; font-size: 14px; line-height: 1.55; color: var(--body); max-width: 88ch; }
+
+/* ---------- Language toggle ---------- */
+.lang-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 10px; font: 600 13px/1 var(--font-sans); letter-spacing: .02em; border-radius: 999px; }
+.lang-toggle:hover, .lang-toggle:focus-visible { background: var(--sol-tint); color: var(--ink); }
+.site-nav .lang-toggle { align-self: center; margin: 0 4px; }
+.mobile-header-actions { display: flex; align-items: center; gap: 2px; }
+@media (min-width: 860px) { .mobile-header-actions .lang-toggle { display: none; } }
