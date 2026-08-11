@@ -750,8 +750,8 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 
 .home-proof { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--ink); }
 #how-it-works { scroll-margin-top: 64px; }
-.home-model, .home-record { padding: clamp(40px, 5vw, 68px) clamp(24px, 4vw, 58px); }
-.home-model { display: flex; flex-direction: column; justify-content: space-between; gap: 38px; }
+.home-model, .home-record { padding: clamp(34px, 4vw, 52px) clamp(24px, 4vw, 58px); }
+.home-model { display: flex; flex-direction: column; justify-content: flex-start; gap: 28px; }
 .home-model > .meta {
   font-family: var(--font-sans);
   font-size: 14px;
@@ -759,18 +759,18 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   letter-spacing: -.015em;
   text-transform: none;
 }
-.home-model h2 { margin-top: 14px; font-size: clamp(30px, 3.2vw, 48px); max-width: 19ch; }
-.home-model-detail { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px 36px; }
+.home-model h2 { font-size: clamp(30px, 2.8vw, 42px); max-width: 19ch; }
+.home-model-detail { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 20px; }
 .home-model-detail .body-text { max-width: 50ch; }
 .home-record { background: var(--mar); color: #FFFFFF; }
 .home-record > .meta { color: rgba(255,255,255,.72); }
 .home-record-source { margin-top: 14px; color: rgba(255,255,255,.72); font-size: 11px; line-height: 1.45; }
 .home-record a { color: inherit; }
 .home-record a:focus-visible { outline-color: #FFFFFF; }
-.home-metrics { display: grid; grid-template-columns: 1fr 1fr; margin-top: 22px; border-top: 2px solid var(--pcc-sky); }
+.home-metrics { display: grid; grid-template-columns: 1fr 1fr; margin-top: 16px; border-top: 2px solid var(--pcc-sky); }
 .home-metric { padding: 22px 0 20px; }
 .home-metric + .home-metric { border-left: 1px solid rgba(255,255,255,.3); padding-left: clamp(18px, 2.2vw, 34px); }
-.home-metric .num { font-size: clamp(42px, 4.5vw, 64px); font-weight: 600; letter-spacing: -0.045em; line-height: .9; }
+.home-metric .num { font-size: clamp(38px, 3.5vw, 54px); font-weight: 600; letter-spacing: -0.045em; line-height: .9; }
 .home-metric .lbl { margin-top: 12px; font-size: 16px; font-weight: 600; }
 .home-metric .src { margin-top: 6px; color: rgba(255,255,255,.72); font-size: 11px; line-height: 1.45; }
 .home-proof-links { margin-top: 8px; border-top: 1px solid rgba(255,255,255,.3); }
