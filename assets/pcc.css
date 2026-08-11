@@ -742,7 +742,8 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 }
 .home-kicker { margin-bottom: clamp(24px, 4vw, 50px); }
 .home-deck { margin-top: 22px; max-width: 43ch; color: var(--body); font-size: 15px; line-height: 1.55; }
-.home-hero-cta { margin-top: 28px; max-width: 18ch; font-size: clamp(22px, 2.3vw, 34px); font-weight: 600; line-height: 1.06; letter-spacing: -.035em; }
+.home-hero-cta { margin-top: 28px; max-width: 24ch; font-size: clamp(22px, 2.3vw, 34px); font-weight: 600; line-height: 1.06; letter-spacing: -.035em; }
+.home-hero-cta > .sentence-visual { display: block; }
 .home-actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 24px; }
 .btn-donate { background: var(--rojo); color: #FFFFFF; }
 .btn-donate:hover { background: #8C211B; color: #FFFFFF; }
@@ -936,7 +937,7 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   .home-kicker { margin-bottom: 14px; }
   .home-display { font-size: clamp(34px, 9.6vw, 40px); line-height: .98; max-width: 13ch; }
   .home-deck { margin-top: 14px; font-size: 14px; line-height: 1.5; }
-  .home-hero-cta { margin-top: 22px; font-size: 24px; line-height: 1.08; max-width: 16ch; }
+  .home-hero-cta { margin-top: 22px; font-size: 24px; line-height: 1.08; max-width: none; }
   .home-actions { margin-top: 20px; }
   .home-actions { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); gap: 10px; width: 100%; }
   .home-actions .btn, .home-actions .action-link { width: 100%; padding-left: 12px; padding-right: 12px; }
