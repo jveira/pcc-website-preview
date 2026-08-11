@@ -130,11 +130,6 @@
   const syncHeader = () => {
     const y = window.scrollY;
     header?.classList.toggle('is-scrolled', y > 12);
-    if (dockEl && !prefersReduce.matches && !dockEl.matches(':focus-within')) {
-      const delta = y - lastY;
-      if (y < 320 || delta < -6) dockEl.classList.remove('is-scrolled-away');
-      else if (delta > 6) dockEl.classList.add('is-scrolled-away');
-    }
     if (progressEl) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       progressEl.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
@@ -156,6 +151,7 @@
     }, { rootMargin: '0px 0px 68px 0px', threshold: 0 });
     dockObserver.observe(footer);
   }
+
   const dockOcclusions = [...document.querySelectorAll('[data-dock-occlusion]')];
   if (mobileDock && dockOcclusions.length && 'IntersectionObserver' in window) {
     const visibleOcclusions = new Set();

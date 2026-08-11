@@ -865,13 +865,12 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
     transition: background-color .2s ease, color .2s ease, transform .2s var(--motion-ease);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.62);
   }
-  .mobile-dock-link[aria-current="page"]:not(.mobile-dock-donate) { border-color: rgba(7,63,75,.42); background: rgba(83,178,203,.2); color: var(--mar); }
+  .mobile-dock-link[aria-current="page"]:not(.mobile-dock-donate) { border-color: var(--mar); background: var(--mar); color: #FFFFFF; }
   .mobile-dock-arrow { font: 400 11px/1 var(--font-mono); transition: transform .25s var(--motion-ease); }
   .mobile-dock-link:hover .mobile-dock-arrow, .mobile-dock-link:focus-visible .mobile-dock-arrow { transform: translate3d(3px,-3px,0); }
   .mobile-dock-donate { justify-content: space-between; border-color: var(--rojo); background: var(--rojo); color: #FFFFFF; }
   .mobile-dock-donate:hover, .mobile-dock-donate:focus-visible { color: #FFFFFF; background: #8C211B; }
   .mobile-action-dock.is-near-footer, .mobile-action-dock.is-over-local-actions,
-  .mobile-action-dock.is-scrolled-away,
   html.menu-open .mobile-action-dock { opacity: 0; visibility: hidden; pointer-events: none; transform: translate3d(0,12px,0); }
   .mobile-action-dock:focus-within { opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
   html { scroll-padding-bottom: 82px; }
