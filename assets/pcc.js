@@ -347,6 +347,40 @@
     if (window.location.hash === '#partner-criteria') criteriaDisclosure?.setAttribute('open', '');
   });
 
+
+  // Continuity experiment (2026-08-10): image continuity for the programs pair only,
+  // conditional on instant navigation. Everything else skips; reduced motion skips.
+  const VT_DETAIL = /^(\/es)?\/(programs|stories)\/[\w-]+\/$/;
+  const VT_PROGRAM_DETAIL = /^(\/es)?\/programs\/[\w-]+\/$/;
+  const VT_PROGRAM_INDEX = /^(\/es)?\/programs\/$/;
+  const vtAllowed = (fromPath, toPath) =>
+    (VT_PROGRAM_INDEX.test(fromPath) && VT_PROGRAM_DETAIL.test(toPath)) ||
+    (VT_PROGRAM_DETAIL.test(fromPath) && VT_PROGRAM_INDEX.test(toPath));
+  window.addEventListener('pageswap', (event) => {
+    if (!event.viewTransition) return;
+    let to = null;
+    try { to = event.activation?.entry ? new URL(event.activation.entry.url).pathname : null; } catch (e) {}
+    if (!to || !vtAllowed(window.location.pathname, to) || reducedMotion) event.viewTransition.skipTransition();
+  });
+  window.addEventListener('pagereveal', (event) => {
+    if (!event.viewTransition) return;
+    let from = null;
+    try { from = navigation?.activation?.from ? new URL(navigation.activation.from.url).pathname : null; } catch (e) {}
+    if (!from || !vtAllowed(from, window.location.pathname) || reducedMotion) event.viewTransition.skipTransition();
+  });
+  if (/^(\/es)?\/(programs|stories)\/$/.test(window.location.pathname) &&
+      HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+    const urls = [...new Set([...document.querySelectorAll('a[href]')]
+      .map((a) => a.getAttribute('href'))
+      .filter((h) => h && VT_DETAIL.test(h)))];
+    if (urls.length) {
+      const spec = document.createElement('script');
+      spec.type = 'speculationrules';
+      spec.textContent = JSON.stringify({ prerender: [{ urls, eagerness: 'moderate' }] });
+      document.head.appendChild(spec);
+    }
+  }
+
   if (reducedMotion) return;
 
   const reveals = [...document.querySelectorAll('.reveal, .media-reveal')];

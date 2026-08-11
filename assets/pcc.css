@@ -139,7 +139,7 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   background: #FFFFFF; border-bottom: 1px solid rgba(17,17,17,.12);
   transition: background-color .22s ease, border-color .22s ease;
 }
-.site-header.is-scrolled { background: #FFFFFF; border-bottom-color: rgba(17,17,17,.2); }
+.site-header.is-scrolled { background: #FFFFFF; border-bottom-color: rgba(17,17,17,.2); box-shadow: inset 0 1px 0 rgba(255,255,255,.62); }
 .site-header .bar {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 0 24px; padding-left: var(--gutter);
@@ -863,6 +863,7 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     transition: background-color .2s ease, color .2s ease, transform .2s var(--motion-ease);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.62);
   }
   .mobile-dock-link[aria-current="page"]:not(.mobile-dock-donate) { border-color: rgba(7,63,75,.42); background: rgba(83,178,203,.2); color: var(--mar); }
   .mobile-dock-arrow { font: 400 11px/1 var(--font-mono); transition: transform .25s var(--motion-ease); }
@@ -1158,7 +1159,7 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .site-header, .site-header.is-scrolled, .enhanced .menu-toggle, .mobile-dock-link, .context-strip--local { background: #FFFFFF; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .site-header, .site-header.is-scrolled, .enhanced .menu-toggle, .mobile-dock-link, .context-strip--local { background: #FFFFFF; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
   .mobile-dock-donate { background: var(--rojo); }
 }
 
@@ -1177,3 +1178,15 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
 .site-nav .lang-toggle { align-self: center; margin: 0 4px; }
 .mobile-header-actions { display: flex; align-items: center; gap: 2px; }
 @media (min-width: 860px) { .mobile-header-actions .lang-toggle { display: none; } }
+
+
+/* ---------- Continuity experiment (owner-approved, 2026-08-10) ----------
+   Cross-document image continuity for the programs pair ONLY, conditional on
+   instant navigation: pcc.js prerenders detail pages and skips every other
+   transition. Root swaps instantly; only the shared program image morphs. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+.vt-alpha-fc { view-transition-name: vt-alpha-fc; }
+.vt-caminos-nativos { view-transition-name: vt-caminos-nativos; }
+.vt-mas-que-vencedores { view-transition-name: vt-mas-que-vencedores; }
+::view-transition-group(*) { animation-duration: .32s; animation-timing-function: cubic-bezier(.16,1,.3,1); }
