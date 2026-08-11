@@ -1162,6 +1162,118 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   .mobile-dock-donate { background: var(--rojo); }
 }
 
+/* ---------- Editorial polish pass (2026-08-10) ----------
+   Open information architecture is the default. Rules separate true records;
+   they do not turn every route into a spreadsheet. Utility glass remains limited
+   to moving navigation, while media and evidence retain their own roles. */
+.footer-menu a:last-child,
+.footer-menu a:last-child:hover,
+.footer-menu a:last-child:focus-visible {
+  min-width: 44px;
+  padding-inline: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--sol);
+}
+.footer-menu a:last-child::after { display: block; }
+.footer-menu a:last-child:hover::after,
+.footer-menu a:last-child:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+
+/* Definitions read as an editorial strip, not a 2×2 data table. */
+.fact-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.fact-grid dt,
+.program-record span {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: .01em;
+  text-transform: none;
+  font-weight: 600;
+}
+.fact-grid dd { font-size: 16px; line-height: 1.35; }
+.program-record {
+  background: transparent;
+  border-left: 1px solid var(--hairline);
+  gap: 28px;
+}
+.program-record strong { font-size: 15px; }
+.program-evidence-grid { gap: 32px; border-top: 1px solid var(--hairline); }
+.program-evidence-grid > * + * { border-left: 0; }
+
+/* Partner identities are a field of marks, not logo cards. */
+.partner-logo-grid { align-items: end; gap: clamp(28px, 6vw, 92px); }
+.partner-logo-grid > a { grid-template-rows: 150px auto; background: transparent; }
+.partner-logo-grid img { max-height: 150px; padding: 10px 0; }
+.partner-logo-grid > a > span { border-top: 0; padding: 12px 0 0; }
+.partner-logo-grid > a > span span { font-family: var(--font-sans); }
+
+/* Criteria is a readable disclosure, with motion kept on the affordance. */
+.criteria-disclosure > summary { border: 0; }
+.criteria-disclosure[open] > summary { color: var(--mar); }
+
+/* Related links are a quiet end note, never another table. */
+.continuation-links { grid-template-columns: auto 1fr; background: var(--ground); border-top: 1px solid var(--hairline); }
+.continuation-links > div { justify-content: flex-start; }
+.continuation-links a { font-size: 15px; }
+
+@media (max-width: 699px) {
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    padding: 14px 0 8px;
+    border-top: 1px solid rgba(255,255,255,.22);
+    border-bottom: 0;
+  }
+  .footer-menu a,
+  .footer-menu a:nth-last-child(-n+2),
+  .footer-menu a:nth-last-child(-n+3) {
+    flex: 0 0 calc(50% - 10px);
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+  }
+  .footer-menu a:last-child { justify-content: flex-start; }
+  .footer-connect {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 18px;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.18);
+  }
+  .footer-connect a { min-height: 44px; font-size: 13px; }
+  .legal-strip { display: flex; align-items: flex-start; font-size: 10px; }
+  .legal-strip span:nth-child(2) { order: 3; width: 100%; }
+  .fact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px var(--gutter) 26px;
+  }
+  .fact-grid > div:nth-child(-n+2) { border-bottom: 0; }
+  .program-record { grid-template-columns: 1fr; gap: 22px; border-left: 0; border-top: 1px solid var(--hairline); padding: 28px var(--gutter); }
+  .program-evidence-grid { gap: 0; }
+  .program-evidence-grid > * + * { border-top: 1px solid var(--hairline); }
+  .partner-logo-grid { gap: 0; padding: 0 var(--gutter) 34px; }
+  .partner-logo-grid > a { grid-template-columns: 96px 1fr; grid-template-rows: 92px; border-top: 1px solid var(--hairline); }
+  .partner-logo-grid img { width: 96px; height: 92px; padding: 10px 0; }
+  .partner-logo-grid > a > span { padding: 0 0 0 18px; }
+  .continuation-links { grid-template-columns: 1fr; gap: 4px; }
+  .continuation-links > div { display: flex; flex-wrap: wrap; gap: 0 20px; }
+  .continuation-links a { min-height: 44px; border-top: 0; }
+  .criteria-disclosure > summary { min-height: 48px; padding-inline: 0; }
+  .home-hero-media .frame { transform: translate3d(0, var(--hero-drift, 0px), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-media .frame { transform: none !important; }
+}
+
 /* ---------- Notice band (temporary; controlled by data/content/notice.json) ---------- */
 .notice-band { display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: baseline; padding: 16px var(--gutter); border-bottom: 1px solid var(--ink); background: var(--sol-tint); }
 .notice-band .notice-label { flex: 0 0 auto; font: 600 12px/1.5 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rojo); }

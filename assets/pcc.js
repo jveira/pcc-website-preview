@@ -117,6 +117,7 @@
   });
 
   const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const heroFrame = document.querySelector('.home-hero-media .frame');
   const dockEl = document.querySelector('[data-mobile-dock]');
   let lastY = window.scrollY;
   let progressEl = null;
@@ -130,6 +131,10 @@
   const syncHeader = () => {
     const y = window.scrollY;
     header?.classList.toggle('is-scrolled', y > 12);
+    if (heroFrame && !prefersReduce.matches) {
+      const drift = Math.min(22, Math.max(0, y * 0.055));
+      heroFrame.style.setProperty('--hero-drift', `${drift.toFixed(2)}px`);
+    }
     if (progressEl) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       progressEl.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
