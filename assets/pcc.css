@@ -1268,6 +1268,17 @@ p.meta a, .meta.underlink { display: inline-block; padding: 15px 0; margin: -15p
   .continuation-links a { min-height: 44px; border-top: 0; }
   .criteria-disclosure > summary { min-height: 48px; padding-inline: 0; }
   .home-hero-media .frame { transform: translate3d(0, var(--hero-drift, 0px), 0); }
+  /* The lead Stories still is a native 4:3 frame. Keep the people in view
+     instead of forcing it into the shallow crop used by generic mastheads. */
+  .editorial-masthead--stories .masthead-media > a { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 859px) {
+  /* Language lives once in the mobile header. Do not repeat it as a drawer row. */
+  .enhanced .site-nav > .lang-toggle { display: none; }
+  .enhanced .site-nav { background: #FFFFFF; }
+  .footer-connect { row-gap: 6px; }
+  .legal-strip { gap: 12px 24px; padding-top: 20px; padding-bottom: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
