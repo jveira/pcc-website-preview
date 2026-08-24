@@ -1,0 +1,67 @@
+{
+  "$comment": "Spanish overlay for stories.json, keyed by slug. DRAFT TRANSLATIONS of PCC's letters, faithful to the approved English passages; founder review required before production. Film titles stay in English (they are the published titles of the films on PCC's channel); film metadata and alt text are translated. familia poderosa stays as written.",
+  "items": {
+    "2025-year-in-review": {
+      "title": "Resumen del año 2025",
+      "heroAlt": "Collage fotográfico del informe anual 2025 de Powerful Children Colombia",
+      "summary": "Gracias a tu apoyo, junto a nuestros aliados la Fundación Caminos Nativos y Alpha FC, llegamos a 233 niños y recaudamos más de $47,000 dólares.",
+      "body": [
+        "A Powerful Children Colombia le emociona compartir contigo nuestro informe anual de 2025.",
+        "Estamos profundamente agradecidos por la oportunidad de seguir apoyando el trabajo de líderes comunitarios y fundaciones colombianas dedicadas que crean las condiciones para que los niños crezcan, jueguen y sueñen. Los programas que financiamos colectivamente, junto contigo y con nuestros donantes, ofrecen caminos atractivos y significativos para que los niños fortalezcan sus habilidades físicas y mentales, construyan comunidad y descubran su fuerza.",
+        "Gracias a tu apoyo, junto a nuestros aliados la Fundación Caminos Nativos y Alpha FC, llegamos a 233 niños y recaudamos más de $47,000 dólares.",
+    "Claro que los números cuentan solo una parte de la historia. Ya en nuestro cuarto año, el crecimiento es real: pasamos de acompañar a 21 niños en nuestro primer año a 233 en 2025. En 2026 sumamos una nueva organización aliada, Más Que Vencedores, y ya acompañamos a 335 niños. Pero lo que más nos entusiasma es todo lo que está creciendo detrás de esas cifras. Dos de los primeros ciclistas de Pedalea con Conciencia compiten ahora en un nivel más avanzado y acompañan a los niños que vienen detrás. Este año, por segunda vez, familias de cinco comunidades se reunieron en el encuentro familiar de Alpha FC. Y nuestras organizaciones aliadas siguen evolucionando con los niños a quienes acompañan. Esto incluye nuevos talleres de salud mental para las familias de Caminos Nativos y una iniciativa dedicada a los jóvenes de 15 a 17 años de Alpha FC. Cuatro años después, esto empieza a sentirse menos como un programa y más como un ecosistema. Por eso nos emociona tanto lo que viene en 2026.",
+        "¡Gracias por invertir en este trabajo y por ser parte vital de nuestra familia poderosa!",
+        "En solidaridad y gratitud,|El equipo de Powerful Children Colombia"
+      ]
+    },
+    "2024-year-in-review": {
+      "title": "Resumen del año 2024",
+      "theme": "Diseñar para crecer",
+      "heroAlt": "Collage fotográfico del informe anual 2024 de Powerful Children Colombia",
+      "summary": "Llegamos a 215 niños y recaudamos más de $43,000 dólares. El deporte es paz.",
+      "body": [
+        "Querida familia poderosa,",
+        "A Powerful Children Colombia le emociona compartir contigo nuestro informe anual de 2024.",
+        "Estamos agradecidos por otro año de aportar a nuestro esfuerzo colectivo para que la niñez de Colombia descubra su fuerza y desarrolle todo su potencial a través de programas deportivos creados por líderes comunitarios valientes, apasionados y generosos. Cada año aprendemos cosas nuevas que mejoran nuestra forma de trabajar, fortalecen nuestras relaciones con las comunidades vulnerables con las que trabajamos y amplían nuestra visión de cómo invertir en nuestra hermosa Colombia.",
+        "Los números nunca alcanzan a mostrar todo el progreso de una comunidad. Aun así, nos enorgullece compartir que este año llegamos a 215 niños y recaudamos más de $43,000 dólares. Durante nuestro viaje a Colombia en noviembre escuchamos frases como: El deporte es paz, y Lo que se escribe en el alma de un niño no se puede borrar. La alegría, la gratitud, el amor, la vulnerabilidad y la resiliencia de los niños, sus familias y sus líderes brillaron en cada visita.",
+        "No dejes de visitar la página de Alpha FC para ver una entrevista reciente con sus cofundadores Esteban y Andrea. Sus reflexiones muestran la pasión y el cuidado que impulsan estos programas.",
+        "Gracias por seguir creyendo en esta misión, por invertir en ella y por permitirnos, a nosotros y a nuestros niños, soñar en grande. Tenemos planes emocionantes para 2025 y nada de esto sería posible sin tu apoyo, el apoyo de nuestra familia poderosa.",
+        "Con infinita gratitud e inspiración por el futuro,|El equipo de Powerful Children Colombia"
+      ]
+    },
+    "2023-year-in-review": {
+      "title": "Resumen del año 2023",
+      "theme": "Construir comunidad",
+      "heroAlt": "Collage del resumen del año 2023 con fotografías de la comunidad y los programas de PCC",
+      "summary": "El 2023 fue un año de construir comunidad.",
+      "body": [
+        "Querida familia poderosa,",
+        "El 2023 fue un año de construir comunidad. En 2022 empezamos de nuevo y convertimos el sueño de Powerful Children Colombia en realidad. En 2023 sostuvimos ese trabajo, y eso no podía suceder solo. Construir comunidad exige confianza, humildad y colaboración. Al reflexionar sobre todo lo que logramos en 2023, en Powerful Children Colombia nos sentimos muy orgullosos y muy honrados de trabajar en alianza con tantas personas increíbles por nuestra misión.",
+        "Seguimos invirtiendo en nuestra alianza con Caminos Nativos, y la escuela de ciclismo evolucionó para incorporar artes, servicio comunitario y formación en emprendimiento. Después de meses de colaboración, también lanzamos el piloto de Un Sueño Que Construye Sueños con nuestro aliado ES Futsal. El programa de fútbol sala tuvo tan buena acogida que reinvertimos rápidamente en una segunda fase. En noviembre tuvimos la oportunidad de visitar a los 131 niños que se benefician de estos programas y a los líderes comunitarios que lo hacen posible. Su compromiso y su creatividad nos siguen inspirando.",
+        "Tras bambalinas, hemos trabajado con dedicación para construir y fortalecer nuestros procesos de evaluación del impacto de los programas. Como resultado, durante el último año aumentamos la estandarización y el rigor de nuestros reportes. Estos esfuerzos les han permitido a nuestros aliados aprender nuevas formas de administrar mejor sus propias operaciones, priorizando la eficiencia y la transparencia.",
+        "También creció nuestro equipo: dimos la bienvenida a una nueva directora de programas en Colombia, Adriana Suarez, e invitamos a la actriz Ivana Rojas como nuestra primera embajadora, para ayudarnos a visibilizar el trabajo increíble de nuestros aliados y la alegría y el beneficio que estos programas traen a las comunidades.",
+        "Recaudamos más de $40,000 dólares en 2023. Esto incluyó una generosa donación de Evergreen Communities, LLC, que financió por completo la fase 2 de Pedalea con Conciencia de Caminos Nativos, así como un aporte destacado del Cumber Family Charitable Trust. Les agradecemos mucho a ustedes, nuestros donantes, que se hayan sumado para financiar este trabajo crucial y transformador.",
+        "Con infinita gratitud e inspiración por el futuro,|El equipo de Powerful Children Colombia"
+      ]
+    },
+    "2022-year-in-review": {
+      "title": "Resumen del año 2022",
+      "theme": "Nuevos comienzos",
+      "heroAlt": "Líderes de PCC y de Caminos Nativos reunidos con niños de la comunidad",
+      "summary": "El 2022 fue un año de nuevos comienzos.",
+      "body": [
+        "Querida familia poderosa,",
+        "El 2022 fue un año de nuevos comienzos. Empezar de nuevo exige esperanza, valentía, adaptabilidad y humildad. Al reflexionar sobre todo lo que logramos en 2022, en Powerful Children Colombia nos sentimos muy orgullosos y muy honrados de trabajar en alianza con tantas personas increíbles por la misión de que todos los niños descubran su fuerza y desarrollen todo su potencial.",
+        "Presentamos Powerful Children Colombia al mundo el 18 de abril. Personas de todo el planeta respondieron con generosidad y apoyo. TÚ elegiste invertir en este sueño y eres clave para hacerlo realidad. Nos habíamos puesto la meta inicial de recaudar $25,000 dólares en nuestro primer año. Terminamos recaudando más de $62,000 dólares para lanzar y sostener nuestros esfuerzos. Les estamos muy agradecidos a ustedes, nuestros donantes, por aliarse con nosotros para financiar este trabajo crucial y transformador.",
+        "En julio, nuestra primera organización aliada, Caminos Nativos, lanzó Pedalea con Conciencia, un programa que apoyó el desarrollo de una escuela de ciclismo en Cabrera, Santander, donde 21 niños matriculados en el colegio, de 5 a 12 años, recibieron bicicletas, el acompañamiento de entrenadores deportivos y de salud mental, y la oportunidad de construir comunidad mientras conocían el ciclismo competitivo. Todo nuestro equipo pudo estar presente en el lanzamiento del programa. Fue increíble ver a la comunidad reunida celebrando esta ocasión tan especial.",
+        "Nuestro primer evento presencial se realizó el 5 de noviembre en uno de nuestros restaurantes colombianos favoritos, Escala Koreatown, en Los Ángeles, California. La actriz Ivana Rojas presentó el evento, miembros de la junta de Powerful Children Colombia compartieron la misión, las actividades y las ambiciones futuras de la organización, y los DJ Bianca Maieli, Vlatz y Helikonia cerraron la noche. Fue una velada llena de espíritu y, entre todos, recaudamos más de $5,000 dólares para los esfuerzos futuros de Powerful Children Colombia.",
+        "Con infinita gratitud e inspiración por el futuro,|Kathy Suarez, presidenta, Powerful Children Colombia"
+      ]
+    },
+    "meet-esteban-and-andrea": { "meta": "Alpha FC · Pereira", "stillAlt": "Fotograma del video Meet Esteban and Andrea of Alpha FC" },
+    "meet-paola-arenas-duarte": { "meta": "Caminos Nativos · Cabrera", "stillAlt": "Fotograma del video Meet Paola Arenas Duarte of Caminos Nativos" },
+    "pedalea-con-conciencia-launch-event": { "meta": "Caminos Nativos · Cabrera · 2022", "stillAlt": "Fotograma del video del evento de lanzamiento de Pedalea con Conciencia" },
+    "2022-launch-party": { "meta": "Los Ángeles · 2022", "stillAlt": "Fotograma del video de la fiesta de lanzamiento de Powerful Children Colombia en 2022" },
+    "a-message-from-ivana-rojas": { "meta": "Embajadora · 2023", "stillAlt": "Fotograma del video A message from Ivana Rojas" }
+  }
+}
