@@ -1,0 +1,164 @@
+{
+  "$comment": "Programs collection. Alpha FC and Caminos Nativos narratives are verbatim or meaning-preserving from powerfulchildrencolombia.org program pages (crawled 2026-08-09). Summaries are source-first excerpts. Más Que Vencedores is from the founder-approved client request dated 2026-07-22 and supplied by the owner on 2026-08-09. Maps 1:1 to the production CMS contract.",
+  "items": [
+    {
+      "slug": "alpha-fc",
+      "name": "Alpha FC",
+      "localName": "Un Sueño Que Construye Sueños",
+      "localNameTranslation": "A Dream That Builds Dreams",
+      "summary": "Un Sueño Que Construye Sueños (A Dream that Builds Dreams) is a futbol sala club (soccer played on small concrete courts) that reaches nearly 200 children across five communities.",
+      "tagline": "On the court, kids build health, confidence, and connection.",
+      "place": "Pereira, Risaralda",
+      "department": "Risaralda",
+      "coordinates": "",
+    "programSince": 2023,
+    "launchLabel": "Launched in 2023",
+      "status": "Active",
+      "pccRole": "Program design, funding, monitoring and evaluation partner",
+      "funding": "100% PCC",
+      "discipline": "Fútbol sala",
+      "childrenLabel": "Nearly 200",
+      "communities": ["Taparcal", "Acacias", "Málaga", "Normandía", "Santa Rosa de Cabal"],
+      "organization": "alpha-fc-org",
+      "heroImage": "alpha-hero.jpg",
+      "heroAlt": "Alpha FC players during a fútbol sala session in Pereira",
+      "featureImage": "alpha-kathy-selected.webp",
+      "featureAlt": "Two young Alpha FC players practicing fútbol sala together on a community court in Pereira",
+      "featureCompanionImage": "alpha-field-4.webp",
+      "featureCompanionAlt": "Alpha FC participants and community members gathered together on a covered court in Pereira",
+      "gallery": [
+        {"image": "alpha-field-1.webp", "alt": "An Alpha FC coach speaking with young players seated on the field in Pereira"},
+        {"image": "alpha-field-2.webp", "alt": "Alpha FC players practicing together on a field in Pereira"},
+        {"image": "alpha-field-3.webp", "alt": "Alpha FC players taking part in an evening training session in Pereira"},
+        {"image": "alpha-field-4.webp", "alt": "Alpha FC participants and community members gathered together on a covered court in Pereira"},
+        {"image": "alpha-field-5.webp", "alt": "A wide view of an Alpha FC community court and the surrounding Pereira landscape"},
+        {"image": "alpha-field-6.webp", "alt": "Alpha FC players and coaches bringing their hands together before an activity in Pereira"},
+        {"image": "alpha-field-7.webp", "alt": "Alpha FC participants gathered with community banners on a court in Pereira"},
+        {"image": "alpha-field-8.webp", "alt": "Alpha FC participants and families watching an event from the stands in Pereira"},
+        {"image": "alpha-field-9.webp", "alt": "Alpha FC participants and coaches together after a community activity in Pereira"}
+      ],
+      "narrativeTitle": "Un Sueño Que Construye Sueños",
+      "narrativeLeft": [
+        "Alpha FC is an athletic club based in Pereira, founded in 2020 by Jorge Esteban Suárez and Andrea González Londoño. The club uses fútbol sala (soccer played on smaller, indoor-style courts) to help children and teens build physical skills alongside personal character.",
+        "Un Sueño Que Construye Sueños (A Dream That Builds Dreams) is a program co-designed with Powerful Children Colombia. Children receive equipment, uniforms, and regular training, along with support from a psychologist and nutritionist. Parents take part in their own sessions to bring that same support home."
+      ],
+      "narrativeRight": [
+        "Since its first phase in 2023, the program has grown and adapted based on where it's seen the strongest community engagement. Today, it reaches nearly 200 children across five communities: Taparcal, Acacias, Málaga, Normandía, and Santa Rosa de Cabal, with more than 80% of participants staying engaged throughout, and families reporting positive changes at home. Some participants have gone on to represent their communities in regional and national competitions.",
+        "This latest phase also introduces Juventud con Futuro, a new track for teens ages 15 to 17 to help them explore their goals and next steps as they approach adulthood."
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/alpha-fc/"
+    },
+    {
+      "slug": "caminos-nativos",
+      "name": "Caminos Nativos",
+      "localName": "Pedalea con Conciencia",
+      "localNameTranslation": "Pedal with Conscience",
+      "summary": "Pedalea con Conciencia (Pedal with Conscience) is a mountain biking program in Cabrera, Santander. It currently serves 35 children.",
+      "tagline": "Pedaling toward stronger minds, stronger families, stronger community.",
+      "place": "Cabrera, Santander",
+      "department": "Santander",
+      "coordinates": "",
+    "programSince": 2022,
+    "launchLabel": "Launched in 2022",
+      "status": "Active",
+      "pccRole": "Program design, funding, monitoring, and evaluation",
+      "funding": "Fully funded by Julio Jaramillo and Evergreen Communities, LLC",
+      "discipline": "Mountain biking",
+      "childrenLabel": "35",
+      "communities": ["Cabrera, Santander"],
+      "organization": "caminos-nativos-org",
+      "heroImage": "caminos-hero.jpg",
+      "heroAlt": "Young riders of Pedalea con Conciencia with their bikes in Cabrera, Santander",
+      "featureImage": "caminos-kathy-selected.webp",
+      "featureAlt": "Two Pedalea con Conciencia riders cycling through a rural neighborhood near Cabrera",
+      "featureCompanionImage": "caminos-ride.jpg",
+      "featureCompanionAlt": "Pedalea con Conciencia riders cycling together on a rural road near Cabrera",
+      "fieldVideo": {
+        "source": "caminos-cabrera-august-2026.mp4",
+        "poster": "caminos-cabrera-august-2026-poster.webp",
+        "place": "Cabrera, Santander",
+        "date": "August 2026",
+        "duration": "2 min 34 sec",
+        "audioLabel": "Spanish audio",
+        "captionLabel": "English and Spanish captions",
+        "ariaLabel": "Pedalea con Conciencia in Cabrera, Santander, August 2026"
+      },
+      "gallery": [
+        {"image": "caminos-field-1.webp", "alt": "The covered community court used by Pedalea con Conciencia in Cabrera"},
+        {"image": "caminos-field-2.webp", "alt": "Pedalea con Conciencia participants and community members gathered in Cabrera"},
+        {"image": "caminos-field-3.webp", "alt": "Pedalea con Conciencia riders pausing together on a trail near Cabrera"},
+        {"image": "caminos-field-4.webp", "alt": "Young Pedalea con Conciencia riders traveling together on a wooded trail near Cabrera"},
+        {"image": "caminos-field-5.webp", "alt": "Caminos Nativos community members preparing a shared meal in Cabrera"},
+        {"image": "caminos-field-6.webp", "alt": "Pedalea con Conciencia riders gathered with their bicycles on a road near Cabrera"},
+        {"image": "caminos-field-7.webp", "alt": "Pedalea con Conciencia participants celebrating together at a community event in Cabrera"},
+        {"image": "caminos-field-8.webp", "alt": "Young Pedalea con Conciencia riders setting out together through Cabrera"},
+        {"image": "caminos-field-9.webp", "alt": "Pedalea con Conciencia participants gathered beneath a cycling event arch"},
+        {"image": "caminos-field-10.webp", "alt": "A Pedalea con Conciencia rider traveling along a rural trail near Cabrera"}
+      ],
+      "narrativeTitle": "Pedalea con Conciencia",
+      "narrativeLeft": [
+        "Caminos Nativos is a Colombian-led organization based in Santander, founded in 2017 by Paola Arenas Duarte. Its work centers on social, cultural, and entrepreneurial projects that give children, adolescents, and women in rural, under-resourced communities new ways to spend their time, new possibilities for their future, and a stronger connection to their cultural roots."
+      ],
+      "narrativeRight": [
+        "One of its programs, Pedalea con Conciencia (Pedal with Conscience), is a mountain biking program in Cabrera, Santander. Since 2022, children have received bikes and ongoing coaching from a professional cyclist and a child psychologist. The same two people have been with the program since day one and have built real trust with the kids and their families. Participation requires staying enrolled in school.",
+        "Since launching in 2022, the program has supported stronger academic performance, closer family relationships, and better physical and emotional well-being among its participants."
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/caminos-nativos/"
+    },
+    {
+      "slug": "mas-que-vencedores",
+      "name": "Más Que Vencedores",
+      "localName": "Más allá del tablero",
+      "localNameTranslation": "Beyond the Chessboard",
+    "summary": "Más allá del tablero (Beyond the Chessboard) is a pilot chess program that reaches 100 children across five public schools in Santa Marta.",
+    "tagline": "Every move builds sharper minds and steadier hearts.",
+      "place": "Santa Marta, Magdalena",
+      "department": "Magdalena",
+      "coordinates": "",
+    "programSince": 2026,
+    "launchLabel": "Launched in July 2026",
+      "status": "Active pilot",
+    "pccRole": "Program design, funding, monitoring and evaluation partner",
+    "funding": "Powerful Children Colombia is subsidizing the pilot phase in full",
+    "discipline": "Chess",
+    "childrenLabel": "100 children",
+    "pilotTarget": {
+      "display": "100 children",
+      "period": "Four-month pilot launched July 2026",
+      "source": "Powerful Children Colombia, July 2026"
+    },
+    "communities": [
+        "Nuestra Señora de Fátima",
+        "Liceo del Norte",
+        "Bastidas",
+        "El Pando",
+        "Francisco de Paula Santander"
+      ],
+      "organization": "mas-que-vencedores-org",
+      "heroImage": "mqv-hero.jpg",
+      "heroAlt": "Fernando Pavón leading a chess session with students in Santa Marta",
+      "featureImage": "mqv-feature.jpg",
+      "featureAlt": "Children greeting each other across chessboards during a Más allá del tablero session",
+      "gallery": [
+        {"image": "mqv-field-1.webp", "alt": "Students playing chess during a Más allá del tablero session in Santa Marta"},
+        {"image": "mqv-field-2.webp", "alt": "A classroom of students practicing chess together in Santa Marta"},
+        {"image": "mqv-field-3.webp", "alt": "Students gathered around chessboards during a school session in Santa Marta"},
+        {"image": "mqv-field-4.webp", "alt": "Students concentrating on chess games during a Más allá del tablero session in Santa Marta"},
+        {"image": "mqv-field-5.webp", "alt": "Chess instructors guiding a Más allá del tablero school session in Santa Marta"},
+        {"image": "mqv-field-6.webp", "alt": "Students greeting one another across chessboards during a school session in Santa Marta"},
+        {"image": "mqv-field-7.webp", "alt": "Students smiling together around chessboards during a school session in Santa Marta"}
+      ],
+      "logoImage": "mqv-logo.png",
+    "narrativeTitle": "Más allá del tablero",
+    "narrativeLeft": [
+      "Fundación Más Que Vencedores (MQV) is an organization based in Santa Marta, Magdalena, founded in 2018 by Fernando Pavón in the Gaira neighborhood, starting with ten kids and one chessboard. Of note, Fernando is the leader of the Chess League of Magdalena and is certified by the Colombian Federation of Chess. The organization reaches approximately 150 children annually.",
+      "MQV's belief that chess can teach kids far more than checkmates anchors its mission: using the game to build strategic thinking and emotional resilience in children living in some of Santa Marta's most vulnerable communities."
+    ],
+    "narrativeRight": [
+      "Más allá del tablero (Beyond the Chessboard) is a program that launched July 2026, in five public schools across Santa Marta: Nuestra Señora de Fátima, Liceo del Norte, Bastidas, El Pando, and Francisco de Paula Santander. Over four months, it will reach 100 children ages 8 to 17, at least a third of them girls, through three sequential levels of chess instruction (basic, intermediate, advanced), each lasting about 40 days.",
+      "Every session pairs 30 minutes of emotional and psychosocial development with 30 minutes of technical chess instruction and an hour of supervised practice matches, building toward biweekly training tournaments and a closing tournament."
+      ],
+      "source": "Founder-approved client request from Hannah Mora dated 2026-07-22; supplied by the owner 2026-08-09"
+    }
+  ]
+}
