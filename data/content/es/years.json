@@ -1,0 +1,28 @@
+{
+  "$comment": "Spanish overlay for years.json, keyed by year+scope. Labels translated; source citations keep the original English quotation, introduced as such, because they quote PCC's published English reports.",
+  "items": {
+    "2025-organization": {
+      "reportLabel": "Informe de fin de año 2025",
+      "programShare": "98 %",
+      "source": "Resumen del año 2025 (original en inglés): \"we reached 233 children and raised over $47,000\""
+    },
+    "2024-organization": {
+      "reportLabel": "Informe de fin de año 2024",
+      "programShare": "94 %",
+      "source": "Resumen del año 2024 (original en inglés): \"we reached 215 children and raised over $43,000\""
+    },
+    "2023-organization": {
+      "reportLabel": "Informe de fin de año 2023",
+      "programShare": "91 %",
+      "source": "Resumen del año 2023 (original en inglés): \"the 131 children who are benefiting from these programs\"; \"We raised over $40,000 in 2023\""
+    },
+    "2022-organization": {
+      "reportLabel": "Informe de fin de año 2022",
+      "programShare": "80 %",
+      "source": "Resumen del año 2022 (original en inglés): \"raising over $62,000\""
+    },
+    "2022-caminos-nativos": {
+      "source": "Resumen del año 2022: 21 niños en el lanzamiento de Pedalea con Conciencia, Cabrera"
+    }
+  }
+}
