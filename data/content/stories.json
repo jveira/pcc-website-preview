@@ -1,0 +1,173 @@
+{
+  "$comment": "Stories collection (letters + films). Letter bodies are selected source-safe passages from powerfulchildrencolombia.org year-in-review pages. Film titles come from PCC's YouTube channel (oEmbed). consentStatus mirrors the CMS guardrail (data/cms-contract.json): only 'cleared' items may render. dateLabel is empty where PCC has not published the date; upload-path months are inference, not fact.",
+  "items": [
+    {
+      "slug": "2025-year-in-review",
+      "type": "letter",
+      "title": "2025 Year in Review",
+      "theme": "",
+      "dateLabel": "",
+      "year": 2025,
+      "heroImage": "recap-2025.jpg",
+      "heroAlt": "Photo recap graphic from Powerful Children Colombia's 2025 annual report",
+      "summary": "Thanks to your support, together with our partners Fundación Caminos Nativos and Alpha FC, we reached 233 children and raised over $47,000.",
+      "body": [
+        "Powerful Children Colombia is thrilled to share our 2025 Annual Report with you.",
+        "We are deeply grateful for the opportunity to continue supporting the work of dedicated Colombian community leaders and nonprofits who create the conditions for children to grow, play, and dream. The programs we collectively fund, together with you, our donors, offer engaging and impactful pathways for children to strengthen their physical and mental skills, build community, and embrace their power, inside and out.",
+        "Thanks to your support, together with our partners Fundación Caminos Nativos and Alpha FC, we reached 233 children and raised over $47,000.",
+    "Of course, numbers tell only part of the story. Now in our fourth year, the growth is real: we've gone from reaching 21 children in our first year to 233 in 2025. Already in 2026, we've added a new partner organization, Más Que Vencedores, and are reaching 335 children. But what keeps us energized is what's compounding underneath those numbers. Two of Pedalea con Conciencia's original riders are now competing at a higher level and mentoring the kids coming up behind them. This year, for the second time, families from five communities came together at Alpha FC's family event. And our partners keep evolving with the children they serve. This includes new mental health workshops for Caminos Nativos parents and a dedicated initiative for Alpha FC's 15 to 17 year olds. Four years in, this is starting to feel less like a program and more like an ecosystem. That's exactly why we're so energized for 2026.",
+        "Thank you for investing in this work and for being a vital part of our familia poderosa!",
+        "In solidarity and gratitude,|The Powerful Children Colombia Team"
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/2025-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Organizational letter published by PCC; no child subject identified."
+    },
+    {
+      "slug": "2024-year-in-review",
+      "type": "letter",
+      "title": "2024 Year in Review",
+      "theme": "Designing for Growth",
+      "dateLabel": "",
+      "year": 2024,
+      "heroImage": "recap-2024.jpg",
+      "heroAlt": "Photo recap graphic from Powerful Children Colombia's 2024 annual report",
+      "summary": "We reached 215 children and raised over $43,000. El deporte es paz. Sport is peace.",
+      "body": [
+        "Dear Familia Poderosa,",
+        "Powerful Children Colombia is thrilled to share our 2024 Annual Report with you.",
+        "We are grateful for another year of contributing to our collective efforts of enabling the powerful children of Colombia to embrace their power and potential by way of athletic programs created by fearless, passionate, and selfless community leaders. Every year, we acquire new learnings that improve our ways of working, strengthen our relationships with the vulnerable communities we serve, and expand our vision for ways to invest in our beautiful Colombia.",
+        "Measuring impact by the numbers is never enough to illustrate the progress on the ground. However, we are proud to share that this past year, we reached 215 children and raised over $43,000. During our trip to Colombia in November, we heard phrases like: “El deporte es paz” (sport is peace) and “Lo que se escribe en el alma de un niño no se puede borrar” (what you write in a child's soul cannot be erased). The joy, gratitude, love, vulnerability, and resilience of the kids, their families, and their leaders shone bright in every visit.",
+        "Be sure to check out the Alpha FC page for a recent interview with Cofounders Esteban and Andrea. Their reflections really demonstrate the passion and care that fuels these programs.",
+        "Thank you for continuing to believe in this mission, to invest in this mission, to enable us and our children to dream big. We have exciting plans for 2025 and none of it could be possible without your support, the support of our familia poderosa.",
+        "With infinite gratitude and inspiration for the future,|The Powerful Children Colombia Team"
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/2024-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Organizational letter published by PCC; no child subject identified."
+    },
+    {
+      "slug": "2023-year-in-review",
+      "type": "letter",
+      "title": "2023 Year in Review",
+      "theme": "Fostering Community",
+      "dateLabel": "",
+      "year": 2023,
+      "heroImage": "recap-2023.jpg",
+      "heroAlt": "2023 Year in Review collage with PCC community and program photographs",
+      "summary": "2023 was a year of fostering community.",
+      "body": [
+        "Dear Familia Poderosa,",
+        "2023 was a year of fostering community. In 2022, we embraced new beginnings, launching Powerful Children Colombia's dream into reality. In 2023, we sustained that work, but that couldn't happen on its own. Fostering community calls for trust, humility and collaboration. In reflection of all that we accomplished in 2023, we at Powerful Children Colombia are so proud, and so honored, to work in partnership with so many incredible individuals towards our mission.",
+        "We continued investing in our partnership with Caminos Nativos, evolving the cycling school to incorporate arts, community service, and entrepreneurial skill building. After months of collaboration, we also launched the 'Un Sueño Que Construye Sueños' pilot with our partner ES Futsal. The indoor soccer program was such a success that we quickly reinvested in a second phase. In November, we had the opportunity to visit the 131 children who are benefiting from these programs and the community leaders who make this all happen. We remain inspired by their commitment and creativity.",
+        "Behind the scenes, we have been working diligently to build out and strengthen our processes for evaluating the impact of our programs. As a result, over the last year, we increased standardization and rigor in our reporting. These efforts have enabled our partners to learn new ways to better manage their own operations, prioritizing efficiency and transparency.",
+        "We also grew our team, welcoming a new Program Director in Colombia, Adriana Suarez, and inviting actress Ivana Rojas as our very first Ambassador, to help us highlight the incredible work of our partners and the joy and benefit these programs bring to these communities.",
+        "We raised over $40,000 in 2023. This included a generous donation from Evergreen Communities, LLC which funded Caminos Nativos' 'Pedalea Con Conciencia's' Phase 2 in full, as well as a notable gift from the Cumber Family Charitable Trust. We are so grateful to you, our donors, for partnering with us to fund this critical, transformational work.",
+        "With infinite gratitude and inspiration for the future,|The Powerful Children Colombia Team"
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/2023-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Organizational letter published by PCC; no child subject identified."
+    },
+    {
+      "slug": "2022-year-in-review",
+      "type": "letter",
+      "title": "2022 Year in Review",
+      "theme": "Embracing New Beginnings",
+      "dateLabel": "",
+      "year": 2022,
+      "heroImage": "team-community.jpg",
+      "heroAlt": "PCC and Caminos Nativos leaders meeting with children in the community",
+      "summary": "2022 was a year of embracing new beginnings.",
+      "body": [
+        "Dear Familia Poderosa,",
+        "2022 was a year of embracing new beginnings. Embracing new beginnings calls for hope, courage, adaptability, and humility. In reflection of all that we accomplished in 2022, we at Powerful Children Colombia are so proud, and so honored, to work in partnership with so many incredible individuals toward the mission of enabling all children to embrace their individual power and potential.",
+        "We introduced the world to Powerful Children Colombia on April 18. People from all over the globe responded with generosity and support. YOU chose to invest in this dream and are critical to making it a reality. We had initially set a goal to fundraise $25,000 in our first year. We ended up raising over $62,000 to launch and sustain our efforts. We are so grateful to you, our donors, for partnering with us to fund this critical, transformational work.",
+        "In July, our first partner organization, Caminos Nativos, launched Pedalea con Conciencia (Pedal with Conscience), a program that supported the development of a cycling school in Cabrera, Santander, where 21 children enrolled in school, ages 5 to 12, received bikes, support from athletic and mental health coaches, and had an opportunity to build community while learning the ins and outs of competitive cycling. Our whole team had a chance to be there for the launch of the program. It was incredible to see the community come together to celebrate this momentous occasion.",
+        "Our first-ever in person event took place on November 5, at one of our favorite Colombian restaurants, Escala Koreatown, in Los Angeles, CA. Actor Ivana Rojas emceed the event, Powerful Children Colombia board members shared a bit about the organization's mission, activities and future ambitions, and DJs Bianca Maieli, Vlatz and Helikonia DJ'd to close the night out. It was a wonderfully spirited evening, and together, we raised over $5,000 for Powerful Children Colombia's future efforts.",
+        "With infinite gratitude and inspiration for the future,|Kathy Suarez, President, Powerful Children Colombia"
+      ],
+      "source": "https://www.powerfulchildrencolombia.org/2022-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Organizational letter published by PCC; no child subject identified."
+    },
+    {
+      "slug": "meet-esteban-and-andrea",
+      "type": "film",
+      "title": "Meet Esteban and Andrea of Alpha FC",
+      "program": "alpha-fc",
+      "meta": "Alpha FC · Pereira",
+      "videoUrl": "https://www.youtube.com/watch?v=ojoyapd3_NA",
+      "still": "still-ojoyapd3_NA.jpg",
+      "stillAlt": "Still from the film Meet Esteban and Andrea of Alpha FC",
+      "source": "https://www.powerfulchildrencolombia.org/alpha-fc/",
+      "consentStatus": "cleared",
+      "consentNote": "Subjects are the two adult founders of Alpha FC; PCC publishes this film on its own program page and channel."
+    },
+    {
+      "slug": "meet-paola-arenas-duarte",
+      "type": "film",
+      "title": "Meet Paola Arenas Duarte of Caminos Nativos",
+      "program": "caminos-nativos",
+      "meta": "Caminos Nativos · Cabrera",
+      "videoUrl": "https://www.youtube.com/watch?v=-LI80qUI3Ko",
+      "still": "still--LI80qUI3Ko.jpg",
+      "stillAlt": "Still from the film Meet Paola Arenas Duarte of Caminos Nativos",
+      "source": "https://www.powerfulchildrencolombia.org/caminos-nativos/",
+      "consentStatus": "cleared",
+      "consentNote": "Subject is the adult founder of Fundación Caminos Nativos; PCC-published."
+    },
+    {
+      "slug": "meet-lincoln",
+      "type": "film",
+      "title": "Meet Lincoln",
+      "program": "caminos-nativos",
+      "meta": "Caminos Nativos · Santander",
+      "videoUrl": "https://www.youtube.com/watch?v=PkmphSgQUyQ",
+      "still": "still-PkmphSgQUyQ.jpg",
+      "stillAlt": "Still from the film Meet Lincoln",
+      "source": "https://www.powerfulchildrencolombia.org/caminos-nativos/",
+      "consentStatus": "pending",
+      "consentNote": "Subject appears to be a named program participant; child-subject consent posture is unconfirmed (flags_for_pcc). Withheld until PCC confirms."
+    },
+    {
+      "slug": "pedalea-con-conciencia-launch-event",
+      "type": "film",
+      "title": "Pedalea Con Conciencia Launch Event",
+      "program": "caminos-nativos",
+      "meta": "Caminos Nativos · Cabrera · 2022",
+      "videoUrl": "https://www.youtube.com/watch?v=H2bfU-edLEc",
+      "still": "still-H2bfU-edLEc.jpg",
+      "stillAlt": "Still from the Pedalea con Conciencia launch event film",
+      "source": "https://www.powerfulchildrencolombia.org/2022-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Community launch event footage published by PCC; no named child subject."
+    },
+    {
+      "slug": "2022-launch-party",
+      "type": "film",
+      "title": "2022 Launch Party for Powerful Children Colombia",
+      "program": "",
+      "meta": "Los Angeles · 2022",
+      "videoUrl": "https://www.youtube.com/watch?v=YL66FV5ARmQ",
+      "still": "still-YL66FV5ARmQ.jpg",
+      "stillAlt": "Still from the 2022 Powerful Children Colombia launch party film",
+      "source": "https://www.powerfulchildrencolombia.org/2022-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Adult fundraising event in Los Angeles; PCC-published."
+    },
+    {
+      "slug": "a-message-from-ivana-rojas",
+      "type": "film",
+      "title": "A message from Ivana Rojas",
+      "program": "",
+      "meta": "Ambassador · 2023",
+      "videoUrl": "https://www.youtube.com/watch?v=sXj--3K77jA",
+      "still": "still-sXj--3K77jA.jpg",
+      "stillAlt": "Still from the film A message from Ivana Rojas",
+      "source": "https://www.powerfulchildrencolombia.org/2023-year-in-review/",
+      "consentStatus": "cleared",
+      "consentNote": "Subject is PCC's Ambassador, a public figure speaking on the record."
+    }
+  ]
+}
