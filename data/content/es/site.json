@@ -1,0 +1,89 @@
+{
+  "$comment": "Spanish overlay for site.json. DRAFT TRANSLATIONS by the build agent, faithful to the approved English source (which is itself PCC-verbatim). New public copy in PCC's voice: requires founder review before production launch. Untranslated fields fall back to English. familia poderosa, program names, and place names stay as written. No em/en dashes per the voice contract.",
+  "meta": {
+    "tagline": "Programas liderados por colombianos · Desde 2022 · 501(c)(3)",
+    "mission": "Acompañamos iniciativas lideradas por colombianos para que los niños descubran su fuerza y desarrollen todo su potencial."
+  },
+  "home": {
+    "heroAlt": "Ciclistas de Pedalea con Conciencia con sus bicicletas en una vía de Cabrera, Santander",
+    "storyTitle": "Pedalea con Conciencia.",
+    "storyIntro": "Paola Arenas Duarte fundó Caminos Nativos en Santander en 2017. PCC ayudó a codiseñar y financiar por completo Pedalea con Conciencia, su programa de ciclomontañismo en Cabrera. Actualmente atiende a 35 niños.",
+    "storyBridge": "PCC respalda a los líderes colombianos que ya hacen este trabajo. Ellos conocían sus comunidades mucho antes de que llegara PCC.",
+    "intro": "Acompañamos iniciativas lideradas por colombianos para que los niños descubran su fuerza y desarrollen todo su potencial.",
+    "howItWorksTitle": "Cómo ayuda PCC",
+    "howItWorksBody": "PCC trabaja con organizaciones lideradas por colombianos que ya conocen el territorio y hacen el trabajo. Ayudamos a diseñar y financiar sus programas. Luego las acompañamos mientras crecen. Nosotros no dirigimos los programas. Respaldamos a quienes los lideran.",
+    "latestQuote": "Los programas están llegando más lejos, a nuevas comunidades y a más niños. También llegan más profundo a medida que se suman hermanos y quienes se gradúan regresan como voluntarios.",
+    "supportTitle": "¡Gracias por ser parte vital de nuestra familia poderosa!",
+    "heroClose": "Los programas ya están en marcha. Tu apoyo decide hasta dónde pueden llegar.",
+    "currentChildren": "335",
+    "recordFacts": "",
+    "employerMatch": "Tu empresa puede hacer un aporte equivalente al tuyo. No olvides confirmarlo."
+  },
+  "focus": [
+    "Lo hacemos recaudando fondos para organizaciones aliadas lideradas por colombianos que les dan a niños de 5 a 17 años acceso al deporte, el arte y la educación. Son programas constantes y arraigados en sus comunidades que fortalecen la confianza y la resiliencia dentro y fuera de la cancha."
+  ],
+  "origins": [
+    "Colombia es el país más desigual de América Latina. Las comunidades rurales con acceso limitado a educación de calidad y servicios sociales son las más afectadas. Son los niños quienes pagan el precio, muchas veces obligados a trabajar años antes de lo debido o, en los casos más vulnerables, expuestos a grupos armados o a la explotación.",
+    "Powerful Children Colombia nació de esa realidad. En mayo de 2021, mientras el COVID-19 profundizaba las dificultades económicas en todo el país y jóvenes de barrios trabajadores lideraban protestas nacionales contra la pobreza y la desigualdad, cuatro poderosas, Kathy Suarez, Hannah Mora, Johana Suarez y Claudia Daza, se reunieron por primera vez para pensar cómo ayudar. Llegaron a una idea sencilla. Quienes estaban mejor preparados para ayudar a los niños colombianos no eran organizaciones externas, sino los líderes locales que ya hacían el trabajo. Estos líderes conocían mejor sus comunidades y solo necesitaban recursos para hacer más.",
+    "Esa idea se convirtió en Powerful Children Colombia, reconocida oficialmente como organización 501(c)(3) en enero de 2022. Hoy recaudamos fondos para organizaciones aliadas lideradas por colombianos que les dan a niños de 5 a 17 años acceso al deporte, el arte y la educación. Lo que comenzó con una organización aliada se ha convertido en una red de tres que hoy llega a 335 niños en Colombia. Apenas estamos comenzando."
+  ],
+  "values": [
+    { "name": "Confianza", "body": "Priorizamos la integridad, la responsabilidad, el rigor y la transparencia al trabajar con donantes, con organizaciones y líderes colombianos y con nuestra comunidad de aliados." },
+    { "name": "Inclusión", "body": "Valoramos la diversidad y basamos nuestro trabajo en la humildad, la compasión y la solidaridad. Incorporamos una mirada inclusiva en todo lo que hacemos." },
+    { "name": "Alegría", "body": "Trabajamos con un espíritu alegre y juguetón. Eso alimenta nuestra resiliencia y nos mantiene firmes en el compromiso de apoyar oportunidades positivas para que los jóvenes florezcan." },
+    { "name": "Colaboración", "body": "No podemos hacer este trabajo sin la alianza de donantes, organizaciones lideradas por colombianos, la comunidad colombiana global, voluntarios y asesores formales e informales. Construir comunidad es el centro de nuestro trabajo." },
+    { "name": "Autenticidad", "body": "Somos nosotros mismos sin pedir disculpas. Eso incluye ser valientes y creativos en nuestro enfoque, mantenernos fieles a nuestros valores y seguir conectados con nuestra misión de que los jóvenes descubran toda su fuerza y desarrollen su potencial." }
+  ],
+  "programsIndex": {
+    "title": "Programas",
+    "intro": "Powerful Children Colombia trabaja con organizaciones colombianas que lideran sus propios programas y ayuda a diseñarlos y financiarlos. Los programas actuales se desarrollan en Pereira, Cabrera y Santa Marta.",
+    "criteriaIntro": "Powerful Children Colombia identifica organizaciones aliadas lideradas por colombianos a partir de los siguientes criterios:",
+    "criteria": [
+      "El trabajo de la organización permite que los niños descubran su fuerza y desarrollen su potencial.",
+      "El trabajo de la organización acompaña a niños de 5 a 17 años en zonas de Colombia con recursos limitados mediante programas deportivos, culturales o educativos.",
+      "La organización está registrada como ONG ante el Gobierno colombiano.",
+      "La organización tiene una cuenta bancaria registrada a nombre de la entidad sin ánimo de lucro.",
+      "La organización cuenta con documentación de sus programas y ha demostrado impacto."
+    ],
+    "criteriaOutro": "Powerful Children Colombia trabaja de cerca con las organizaciones aliadas para definir el alcance de una posible financiación, incluidos los objetivos del proyecto, la descripción de los beneficiarios, las actividades, la hoja de ruta, los indicadores de éxito y el presupuesto. Los programas deben entregar informes técnicos y financieros periódicos para informar sobre sus avances.",
+    "criteriaContact": "Si tu organización cumple con estos criterios y está interesada en trabajar con nosotros, escribe a info@powerfulchildrencolombia.org."
+  },
+  "partners": [
+    { "name": "Alpha FC", "type": "Club deportivo", "relationship": "Dirige Un Sueño Que Construye Sueños, un club de fútbol sala en Pereira, Risaralda", "place": "Pereira", "href": "/programs/alpha-fc/" },
+    { "name": "Fundación Caminos Nativos", "type": "Fundación", "relationship": "Dirige Pedalea con Conciencia, una academia de ciclomontañismo en Cabrera, Santander", "place": "Santander", "href": "/programs/caminos-nativos/" },
+    { "name": "Fundación Más Que Vencedores", "type": "Fundación", "relationship": "Dirige Más allá del tablero, un club de ajedrez en Santa Marta, Magdalena", "place": "Santa Marta", "href": "/programs/mas-que-vencedores/" },
+    { "name": "Julio Jaramillo", "type": "Financiador", "relationship": "Apoya Pedalea con Conciencia", "place": "", "href": "" },
+    { "name": "Evergreen Communities, LLC", "type": "Financiador", "relationship": "Junto con Julio Jaramillo, ha financiado Pedalea con Conciencia por completo durante dos años consecutivos", "place": "", "href": "" }
+  ],
+  "donate": {
+    "title": "Gracias por invertir en este trabajo.",
+    "intro": "¡Muchas gracias por considerar una donación! Con tu apoyo financiero, Powerful Children Colombia puede llegar a más niños que lo necesitan. Tus recursos respaldan a líderes locales de confianza que crean oportunidades significativas para cuidar y acompañar a los niños, ayudándolos a descubrir su propia fuerza y desarrollar todo su potencial. Así dejan una huella que puede durar generaciones.",
+    "methods": [
+      { "name": "Donorbox", "detail": "Dona a través del formulario seguro de Donorbox de arriba." },
+      { "name": "Aportes empresariales", "detail": "Tu empresa puede hacer un aporte equivalente a tu donación. El EIN de PCC es 87-3057220. Pregunta en tu empresa o escribe a info@powerfulchildrencolombia.org." },
+      { "name": "Por cheque", "detail": "Haz el cheque a nombre de Powerful Children Colombia y envíalo a 2490 Country View Glen, Escondido, CA 92026." },
+      { "name": "Zelle", "detail": "Envía tu donación por Zelle a accounting@powerfulchildrencolombia.org." }
+    ],
+    "volunteerAreas": [
+      "Legal",
+      "Finanzas",
+      "Comunicaciones, mercadeo y redes sociales",
+      "Investigación",
+      "Recaudación de fondos"
+    ],
+    "certification": "Powerful Children Colombia es una organización certificada 501(c)(3)."
+  },
+  "thankYou": {
+    "kicker": "Gracias",
+    "title": "Gracias por invertir en este trabajo.",
+    "description": "Gracias por apoyar a Powerful Children Colombia y a los líderes colombianos que hacen posibles sus programas.",
+    "receipt": "Si Donorbox te envió a esta página después de completar la donación, recibirás el comprobante en el correo que usaste.",
+    "gratitude": "¡Gracias por ser parte vital de nuestra familia poderosa!",
+    "nextStepsLabel": "Sigue conociendo a Powerful Children Colombia",
+    "programsCta": "Conoce los programas",
+    "storiesCta": "Lee las historias",
+    "contactIntro": "¿Tienes preguntas sobre tu donación? Revisa la carpeta de correo no deseado o escríbenos a",
+    "imageAlt": "Niños y entrenadores montando bicicleta juntos en Cabrera, Santander",
+    "imagePlace": "Cabrera, Santander"
+  }
+}
