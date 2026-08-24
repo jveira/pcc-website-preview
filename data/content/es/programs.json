@@ -1,0 +1,122 @@
+{
+  "$comment": "Spanish overlay for programs.json, keyed by slug. DRAFT TRANSLATIONS, faithful to the approved English source; founder review required before production. Program names, community names, and people stay as written. localNameTranslation is empty in Spanish: the program names are already Spanish.",
+  "items": {
+    "alpha-fc": {
+      "localNameTranslation": "",
+      "summary": "Un Sueño Que Construye Sueños es un club de fútbol sala, fútbol jugado en pequeñas canchas de cemento, que llega a casi 200 niños de cinco comunidades.",
+      "tagline": "En la cancha, los niños fortalecen su salud, su confianza y sus vínculos.",
+      "place": "Pereira, Risaralda",
+      "launchLabel": "Inició en 2023",
+      "status": "Activo",
+      "pccRole": "Aliado en el diseño, la financiación, el monitoreo y la evaluación del programa",
+      "funding": "100% PCC",
+      "discipline": "Fútbol sala",
+      "childrenLabel": "Casi 200 niños",
+      "heroAlt": "Jugadores de Alpha FC durante una sesión de fútbol sala en Pereira",
+      "featureAlt": "Dos jugadores jóvenes de Alpha FC practican fútbol sala en una cancha comunitaria de Pereira",
+      "featureCompanionAlt": "Participantes de Alpha FC y miembros de la comunidad reunidos en una cancha cubierta en Pereira",
+      "gallery": [
+        {"image": "alpha-field-1.webp", "alt": "Un entrenador de Alpha FC conversa con jugadores jóvenes sentados en la cancha en Pereira"},
+        {"image": "alpha-field-2.webp", "alt": "Jugadores de Alpha FC practican juntos en una cancha en Pereira"},
+        {"image": "alpha-field-3.webp", "alt": "Jugadores de Alpha FC participan en un entrenamiento nocturno en Pereira"},
+        {"image": "alpha-field-4.webp", "alt": "Participantes de Alpha FC y miembros de la comunidad reunidos en una cancha cubierta en Pereira"},
+        {"image": "alpha-field-5.webp", "alt": "Vista amplia de una cancha comunitaria de Alpha FC y el paisaje de Pereira"},
+        {"image": "alpha-field-6.webp", "alt": "Jugadores y entrenadores de Alpha FC unen sus manos antes de una actividad en Pereira"},
+        {"image": "alpha-field-7.webp", "alt": "Participantes de Alpha FC reunidos con pancartas comunitarias en una cancha de Pereira"},
+        {"image": "alpha-field-8.webp", "alt": "Participantes y familias de Alpha FC observan un evento desde las gradas en Pereira"},
+        {"image": "alpha-field-9.webp", "alt": "Participantes y entrenadores de Alpha FC juntos después de una actividad comunitaria en Pereira"}
+      ],
+      "narrativeTitle": "Un Sueño Que Construye Sueños",
+      "narrativeLeft": [
+        "Alpha FC es un club deportivo con sede en Pereira, fundado en 2020 por Jorge Esteban Suárez y Andrea González Londoño. El club usa el fútbol sala para que niños y adolescentes desarrollen sus habilidades físicas y fortalezcan su carácter.",
+        "Un Sueño Que Construye Sueños es un programa codiseñado con Powerful Children Colombia. Los niños reciben implementos, uniformes y entrenamiento constante, junto con el acompañamiento de una psicóloga y una nutricionista. Los padres también participan en sesiones para llevar estas herramientas a casa."
+      ],
+      "narrativeRight": [
+        "Desde su primera fase en 2023, el programa ha crecido y se ha adaptado según las comunidades con mayor participación. Hoy llega a casi 200 niños de cinco comunidades: Taparcal, Acacias, Málaga, Normandía y Santa Rosa de Cabal. Más del 80% de los participantes sigue en el programa y las familias reportan cambios positivos en casa. Algunos participantes han llegado a representar a sus comunidades en competencias regionales y nacionales.",
+        "Esta última fase también incluye Juventud con Futuro, una nueva línea para adolescentes de 15 a 17 años que los ayuda a explorar sus metas y sus próximos pasos al acercarse a la vida adulta."
+      ]
+    },
+    "caminos-nativos": {
+      "localNameTranslation": "",
+      "summary": "Pedalea con Conciencia es un programa de ciclomontañismo en Cabrera, Santander. Hoy participan 35 niños.",
+      "tagline": "Pedaleando hacia mentes, familias y comunidades más fuertes.",
+      "place": "Cabrera, Santander",
+      "launchLabel": "Inició en 2022",
+      "status": "Activo",
+      "pccRole": "Diseño, financiación, monitoreo y evaluación del programa",
+      "funding": "Financiado por completo por Julio Jaramillo y Evergreen Communities, LLC",
+      "discipline": "Ciclomontañismo",
+      "childrenLabel": "35 niños",
+      "heroAlt": "Ciclistas de Pedalea con Conciencia con sus bicicletas en Cabrera, Santander",
+      "featureAlt": "Dos ciclistas de Pedalea con Conciencia recorren un barrio rural cerca de Cabrera",
+      "featureCompanionAlt": "Ciclistas de Pedalea con Conciencia pedalean juntos por una vía rural cerca de Cabrera",
+      "fieldVideo": {
+        "source": "caminos-cabrera-august-2026.mp4",
+        "poster": "caminos-cabrera-august-2026-poster.webp",
+        "place": "Cabrera, Santander",
+        "date": "agosto de 2026",
+        "duration": "2 min 34 s",
+        "audioLabel": "Audio en español",
+        "captionLabel": "Subtítulos en español e inglés",
+        "ariaLabel": "Pedalea con Conciencia en Cabrera, Santander, agosto de 2026"
+      },
+      "gallery": [
+        {"image": "caminos-field-1.webp", "alt": "La cancha comunitaria cubierta que usa Pedalea con Conciencia en Cabrera"},
+        {"image": "caminos-field-2.webp", "alt": "Participantes de Pedalea con Conciencia y miembros de la comunidad reunidos en Cabrera"},
+        {"image": "caminos-field-3.webp", "alt": "Ciclistas de Pedalea con Conciencia hacen una pausa juntos en un sendero cerca de Cabrera"},
+        {"image": "caminos-field-4.webp", "alt": "Jóvenes ciclistas de Pedalea con Conciencia recorren juntos un sendero boscoso cerca de Cabrera"},
+        {"image": "caminos-field-5.webp", "alt": "Miembros de la comunidad de Caminos Nativos preparan una comida compartida en Cabrera"},
+        {"image": "caminos-field-6.webp", "alt": "Ciclistas de Pedalea con Conciencia se reúnen con sus bicicletas en una vía cerca de Cabrera"},
+        {"image": "caminos-field-7.webp", "alt": "Participantes de Pedalea con Conciencia celebran juntos en un evento comunitario en Cabrera"},
+        {"image": "caminos-field-8.webp", "alt": "Jóvenes ciclistas de Pedalea con Conciencia salen juntos por Cabrera"},
+        {"image": "caminos-field-9.webp", "alt": "Participantes de Pedalea con Conciencia reunidos bajo un arco de un evento de ciclismo"},
+        {"image": "caminos-field-10.webp", "alt": "Una ciclista de Pedalea con Conciencia recorre un sendero rural cerca de Cabrera"}
+      ],
+      "narrativeTitle": "Pedalea con Conciencia",
+      "narrativeLeft": [
+        "Caminos Nativos es una organización liderada por colombianos con sede en Santander, fundada en 2017 por Paola Arenas Duarte. Su trabajo se centra en proyectos sociales, culturales y de emprendimiento que ofrecen a niños, adolescentes y mujeres de comunidades rurales con recursos limitados alternativas para aprovechar su tiempo, nuevas posibilidades para su futuro y una conexión más fuerte con sus raíces culturales."
+      ],
+      "narrativeRight": [
+        "Uno de sus programas, Pedalea con Conciencia, es un programa de ciclomontañismo en Cabrera, Santander. Desde 2022, los niños han recibido bicicletas y el acompañamiento constante de un ciclista profesional y una psicóloga infantil. El ciclista y la psicóloga han estado con el programa desde el primer día y han construido una relación de confianza con los niños y sus familias. Para participar hay que estar matriculado en el colegio.",
+        "Desde su inicio en 2022, el programa ha contribuido a un mejor desempeño académico, a relaciones familiares más cercanas y a un mayor bienestar físico y emocional entre sus participantes."
+      ]
+    },
+    "mas-que-vencedores": {
+      "localNameTranslation": "",
+      "summary": "Más allá del tablero es un programa piloto de ajedrez que llega a 100 niños en cinco colegios públicos de Santa Marta.",
+      "tagline": "Cada jugada fortalece la mente y el equilibrio emocional.",
+      "place": "Santa Marta, Magdalena",
+      "launchLabel": "Inició en julio de 2026",
+      "status": "Piloto activo",
+      "pccRole": "Aliado en el diseño, la financiación, el monitoreo y la evaluación del programa",
+      "funding": "Powerful Children Colombia financia por completo la fase piloto",
+      "discipline": "Ajedrez",
+      "childrenLabel": "100 niños",
+      "pilotTarget": {
+        "display": "100 niños",
+        "period": "Piloto de cuatro meses iniciado en julio de 2026",
+        "source": "Powerful Children Colombia, julio de 2026"
+      },
+      "heroAlt": "Fernando Pavón dirigiendo una sesión de ajedrez con estudiantes en Santa Marta",
+      "featureAlt": "Niños saludándose sobre los tableros durante una sesión de Más allá del tablero",
+      "gallery": [
+        {"image": "mqv-field-1.webp", "alt": "Estudiantes juegan ajedrez durante una sesión de Más allá del tablero en Santa Marta"},
+        {"image": "mqv-field-2.webp", "alt": "Un salón de estudiantes practica ajedrez en grupo en Santa Marta"},
+        {"image": "mqv-field-3.webp", "alt": "Estudiantes reunidos alrededor de tableros de ajedrez durante una sesión escolar en Santa Marta"},
+        {"image": "mqv-field-4.webp", "alt": "Estudiantes concentrados en sus partidas durante una sesión de Más allá del tablero en Santa Marta"},
+        {"image": "mqv-field-5.webp", "alt": "Instructores de ajedrez acompañan una sesión escolar de Más allá del tablero en Santa Marta"},
+        {"image": "mqv-field-6.webp", "alt": "Estudiantes se saludan sobre los tableros durante una sesión escolar en Santa Marta"},
+        {"image": "mqv-field-7.webp", "alt": "Estudiantes sonríen juntos alrededor de tableros durante una sesión escolar en Santa Marta"}
+      ],
+      "narrativeTitle": "Más allá del tablero",
+      "narrativeLeft": [
+        "La Fundación Más Que Vencedores (MQV) es una organización con sede en Santa Marta, Magdalena, fundada en 2018 por Fernando Pavón en el barrio de Gaira. Empezó con diez niños y un tablero de ajedrez. Fernando lidera la Liga de Ajedrez del Magdalena y está certificado por la Federación Colombiana de Ajedrez. La organización llega a aproximadamente 150 niños cada año.",
+        "MQV cree que el ajedrez puede enseñarles a los niños mucho más que jaques mates. De ahí nace su misión: usar el juego para desarrollar el pensamiento estratégico y la resiliencia emocional de niños que viven en algunas de las comunidades más vulnerables de Santa Marta."
+      ],
+      "narrativeRight": [
+        "Más allá del tablero comenzó en julio de 2026 en cinco colegios públicos de Santa Marta: Nuestra Señora de Fátima, Liceo del Norte, Bastidas, El Pando y Francisco de Paula Santander. El piloto dura cuatro meses y busca llegar a 100 niños de 8 a 17 años, de los cuales al menos una tercera parte serán niñas, a través de tres niveles secuenciales de instrucción de ajedrez (básico, intermedio y avanzado), de unos 40 días cada uno.",
+        "Cada sesión combina 30 minutos de desarrollo emocional y psicosocial con 30 minutos de instrucción técnica de ajedrez y una hora de partidas de práctica supervisadas. El programa avanza hacia torneos de entrenamiento quincenales y un torneo de cierre."
+      ]
+    }
+  }
+}
