@@ -1,0 +1,229 @@
+{
+  "$comment": "Machine-checkable claim registry. scripts/check_site.py greps the built HTML for every pattern here. 'do-not-publish' and 'unresolved' patterns MUST NOT appear in output unless the entry carries an explicit ownerDecision. This is the enforcement layer for data/content-inventory.json → flags_for_pcc; it exists so an unresolved fact cannot reach production by being typed into a template.",
+  "claims": [
+    {
+      "id": "mailing-address",
+      "status": "owner-approved",
+      "patterns": [
+        "2490 Country View Glen",
+        "Escondido CA",
+        "Escondido, CA"
+      ],
+      "why": "The legacy PCC pages gave conflicting addresses. Kathy Suarez resolved the conflict in the governing August 13, 2026 client revision by approving 2490 Country View Glen, Escondido, CA 92026.",
+      "ownerDecision": "The owner directed that Kathy Suarez's current Google Doc is the website truth. Revision 4210, modified August 13, 2026, explicitly approves this mailing address.",
+      "siteHandling": "Publish the approved Escondido mailing address on the Donate page."
+    },
+    {
+      "id": "stale-mailing-address",
+      "status": "do-not-publish",
+      "patterns": [
+        "846 Oneonta Drive"
+      ],
+      "why": "This was the conflicting legacy address. Kathy Suarez replaced it with 2490 Country View Glen in the governing August 13, 2026 client revision.",
+      "ownerDecision": null,
+      "siteHandling": "Keep the stale address absent from every public page."
+    },
+    {
+      "id": "focus-age-range",
+      "status": "owner-approved",
+      "patterns": [
+        "ages 5–17",
+        "ages 5-17",
+        "ages 5 to 17",
+        "5 – 17"
+      ],
+      "why": "PCC's Focus and Programs pages say ages 5–17; the FAQ page says 5–15. Two published values, unreconciled. Resolving by choosing one would be an agent-made fact.",
+      "ownerDecision": "Kathy Suarez's governing 2026-08-12 client revision explicitly uses ages 5 to 17 in the approved About and partnership copy; the owner directed that Kathy's latest document is the website truth.",
+      "siteHandling": "Use ages 5 to 17 where the governing client revision specifies it."
+    },
+    {
+      "id": "stale-focus-age-range",
+      "status": "do-not-publish",
+      "patterns": [
+        "ages 5–15",
+        "ages 5-15",
+        "ages 5 to 15",
+        "5 – 15",
+        "edades de 5 a 15",
+        "entre 5 y 15 años"
+      ],
+      "why": "The legacy FAQ used ages 5 to 15. Kathy Suarez approved ages 5 to 17 in the governing client revision.",
+      "ownerDecision": null,
+      "siteHandling": "Keep the stale age range absent from every public page."
+    },
+    {
+      "id": "alpha-2024-children",
+      "status": "do-not-publish",
+      "patterns": [
+        "180 children",
+        "215 children in 2024 across",
+        "180 niños"
+      ],
+      "why": "The live site no longer states Alpha FC's 2024 figure (it now says 'close to 200'). The old 180 has no current source, and the 2024 per-program split is unconfirmed.",
+      "ownerDecision": null,
+      "siteHandling": "Program shows the current published 'close to 200'; Impact shows only the org-wide 2024 total PCC published (215)."
+    },
+    {
+      "id": "letter-publication-dates",
+      "status": "unresolved",
+      "patterns": [
+        "April 2026",
+        "April 2025",
+        "March 2024",
+        "April 2023"
+      ],
+      "why": "Publication months were inferred from WordPress upload paths, not published by PCC. Inference is not provenance.",
+      "ownerDecision": null,
+      "siteHandling": "Letters display their subject year (from the title) and no publication date."
+    },
+    {
+      "id": "meet-lincoln-consent",
+      "status": "unresolved",
+      "patterns": [
+        "Meet Lincoln"
+      ],
+      "why": "The film's subject appears to be a named program participant. Child-subject consent posture is unconfirmed, and the CMS guardrail forbids publishing a story about a child without confirmed consent.",
+      "ownerDecision": null,
+      "siteHandling": "Film record retained with consentStatus 'pending'; withheld from all rendered pages until PCC confirms."
+    },
+    {
+      "id": "community-departments",
+      "status": "unresolved",
+      "patterns": [
+        "Málaga, Risaralda",
+        "Málaga Risaralda",
+        "Normandía, Risaralda",
+        "Normandía Risaralda",
+        "Santa Rosa de Cabal, Risaralda",
+        "Santa Rosa de Cabal Risaralda"
+      ],
+      "why": "Departments for the three newly-named Alpha FC communities are not stated on the live site. Santa Rosa de Cabal is in Risaralda in public geography, but PCC has not published it as program data.",
+      "ownerDecision": null,
+      "siteHandling": "Communities render by name only; the department field stays empty."
+    },
+    {
+      "id": "program-spend-splits",
+      "status": "owner-approved",
+      "patterns": [
+        "program spend of $",
+        "operating costs of $",
+        "% to programs",
+        "overhead ratio"
+      ],
+      "why": "Kathy Suarez's governing client document supplies a rounded annual comparison for 2022 through 2025, backed by the repository-owned annual reports.",
+      "ownerDecision": "The owner explicitly directed that Kathy's latest Google Doc is the governing truth for the website. The current revision was verified on 2026-08-15.",
+      "siteHandling": "Publish only the rounded values Kathy supplied for each year, preserve annual-letter wording outside Transparency, and identify that the comparison values are rounded."
+    },
+    {
+      "id": "form-990",
+      "status": "do-not-publish",
+      "patterns": [
+        "Form 990",
+        "IRS Form 990"
+      ],
+      "why": "No Form 990 or financial statement is published anywhere on PCC's site; linking or referencing one would imply a document that is not available.",
+      "ownerDecision": null,
+      "siteHandling": "Documents list contains only the four annual reports, Our Beginnings, and the Privacy Policy."
+    },
+    {
+      "id": "es-futsal-identity",
+      "status": "unresolved",
+      "patterns": [
+        "ES Futsal is now Alpha FC",
+        "Es Fustal, now Alpha",
+        "formerly ES Futsal",
+        "renamed Alpha FC"
+      ],
+      "why": "The 2022/2023 letters name ES Futsal (and 'Es Fustal') as the partner; the current site names Alpha FC. Whether this is a rename, a successor, or a different organization is unconfirmed.",
+      "ownerDecision": null,
+      "siteHandling": "The letters publish PCC's own historical wording verbatim; the site never asserts the two are the same organization."
+    },
+    {
+      "id": "film-captions",
+      "status": "unresolved",
+      "patterns": [
+        "with Spanish captions",
+        "English subtitles available"
+      ],
+      "why": "Caption/subtitle availability on the six films is unconfirmed, and the accessibility gate requires captions before films are embedded.",
+      "ownerDecision": null,
+      "siteHandling": "Films link out to YouTube rather than embedding; no caption claim is made on the site."
+    },
+    {
+      "id": "invented-impact-language",
+      "status": "do-not-publish",
+      "patterns": [
+        "transformed lives",
+        "changing lives",
+        "brighter tomorrows",
+        "empowering futures",
+        "lifted out of poverty",
+        "we can end",
+        "proven to increase",
+        "studies prove"
+      ],
+      "why": "Causal and promotional impact language PCC has not published. Trust-critical nonprofit copy states what was counted, not what it caused.",
+      "ownerDecision": null,
+      "siteHandling": "Impact narrative uses PCC's own observational language."
+    },
+    {
+      "id": "donation-impact-equivalents",
+      "status": "do-not-publish",
+      "patterns": [
+        "$25 provides",
+        "$50 provides",
+        "$100 funds",
+        "$25 buys",
+        "per child per month"
+      ],
+      "why": "PCC has not published per-dollar impact equivalents. Inventing them would misrepresent how funds are used.",
+      "ownerDecision": null,
+      "siteHandling": "Donate page describes ways to give and links the financial record instead."
+    },
+    {
+      "id": "zelle-details",
+      "status": "owner-approved",
+      "patterns": [
+        "accounting@powerfulchildrencolombia.org"
+      ],
+      "why": "Earlier client notes withheld the account until founder confirmation. Kathy Suarez supplied and approved the exact account in the governing August 13, 2026 client revision.",
+      "ownerDecision": "The owner directed that Kathy Suarez's current Google Doc is the website truth. Revision 4210, modified August 13, 2026, explicitly approves accounting@powerfulchildrencolombia.org for Zelle donations.",
+      "siteHandling": "Publish the approved Zelle account on the Donate page. Continue to omit transfer-limit claims."
+    },
+    {
+      "id": "zelle-transfer-limit",
+      "status": "do-not-publish",
+      "patterns": [
+        "$2,000 limit",
+        "$2000 limit"
+      ],
+      "why": "Kathy Suarez approved the Zelle account but did not approve a public transfer-limit claim.",
+      "ownerDecision": null,
+      "siteHandling": "Publish the account only. Keep transfer-limit language absent."
+    },
+    {
+      "id": "employer-match-rates",
+      "status": "do-not-publish",
+      "patterns": [
+        "Netflix matches",
+        "matches 200%",
+        "200% match",
+        "matching at 200"
+      ],
+      "why": "Voice note mentioned Netflix matching 200%; company naming and match language need founder confirmation before publication (brief, Q2).",
+      "ownerDecision": null,
+      "siteHandling": "Employer matching described generically with EIN and Benevity mention."
+    },
+    {
+      "id": "earthquake-notice",
+      "status": "unresolved",
+      "patterns": [
+        "earthquake",
+        "terremoto"
+      ],
+      "why": "The 2026-08-10 M7.4 earthquake is sourced public fact. PCC's team supplied the relief purpose and wording in the Summer 2026 Website Revamp document, and the owner supplied the separate Donorbox campaign in-session on 2026-08-11.",
+      "ownerDecision": "Owner directed publication on 2026-08-11 using the PCC team document and the separate colombia-earthquake-relief Donorbox campaign. The permanent Donate page must keep the regular PCC campaign.",
+      "siteHandling": "Home links to a dedicated earthquake-relief route and campaign. General donations remain on the regular Donate route and campaign."
+    }
+  ]
+}
