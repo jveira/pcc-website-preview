@@ -1,0 +1,162 @@
+{
+  "$comment": "Site-wide content: identity, About copy, Programs-index copy, Donate content, partners. Verbatim or meaning-preserving from powerfulchildrencolombia.org (2026-08-09 crawl) and the founder-approved Más Que Vencedores client request supplied by the owner on 2026-08-09 unless marked editorial. On 2026-08-10 the owner replaced the earlier 2:59 PM editorial-voice lock with a source-first direction after identifying synthetic copy across the preview. Current verified facts govern.",
+  "meta": {
+    "name": "Powerful Children Colombia",
+    "domain": "https://www.powerfulchildrencolombia.org",
+    "tagline": "Colombian-led programs · Since 2022 · 501(c)(3)",
+    "mission": "Supporting Colombian-led efforts that enable children to embrace their individual power and potential.",
+    "ogImage": "https://www.powerfulchildrencolombia.org/wp-content/uploads/2026/04/LOGO-CUADRADO-COLOR-scaled.png",
+    "email": "info@powerfulchildrencolombia.org",
+    "donorboxUrl": "https://donorbox.org/powerful-children-colombia-donation-form",
+    "donorboxCampaign": "powerful-children-colombia-donation-form",
+    "earthquakeDonorboxUrl": "https://donorbox.org/colombia-earthquake-relief",
+    "earthquakeDonorboxCampaign": "colombia-earthquake-relief",
+    "social": {
+      "instagram": "https://www.instagram.com/powerfulchildrencolombia/",
+      "linkedin": "https://www.linkedin.com/company/powerful-children-colombia/about/",
+      "facebook": "https://www.facebook.com/Powerful-Children-Colombia-100522772606912"
+    },
+    "privacyPdf": "/assets/documents/pcc-privacy-policy.pdf",
+    "beginningsPdf": "/assets/documents/pcc-our-beginnings.pdf"
+  },
+  "home": {
+    "heroImage": "caminos-hero.jpg",
+    "heroAlt": "Young riders of Pedalea con Conciencia with their bikes on a road in Cabrera, Santander",
+    "storyTitle": "Pedalea con Conciencia.",
+    "storyIntro": "Paola Arenas Duarte founded Caminos Nativos in Santander in 2017. PCC helped co-design and fully fund Pedalea con Conciencia, its mountain biking program in Cabrera. It currently serves 35 children.",
+    "storyBridge": "PCC backs the Colombian leaders already doing the work. They knew their communities long before PCC arrived.",
+    "intro": "Supporting Colombian-led efforts that enable children to embrace their individual power and potential.",
+    "howItWorksTitle": "How PCC helps",
+    "howItWorksBody": "PCC partners with Colombian-led organizations already doing the work on the ground. We help design and fund their programs. Then we support them as they grow. We don't run programs ourselves. We back the leaders who do.",
+    "latestQuote": "Programs are reaching further into new communities and reaching more children. They are also reaching deeper as siblings join and graduates return as volunteers.",
+    "supportTitle": "Thank you for being a vital part of our familia poderosa!",
+    "heroClose": "The programs are already running. Support decides how far they reach.",
+    "currentChildren": "335",
+    "recordFacts": "",
+    "employerMatch": "Your employer may match your gift. Don't forget to double check."
+  },
+  "focus": [
+    "We do this by raising funds for Colombian-led partner organizations that give children ages 5 to 17 access to sports, arts, and education. These consistent, community-rooted programs build confidence and resilience both on and off the field."
+  ],
+  "origins": [
+    "Colombia is the most unequal country in Latin America. Rural communities with limited access to quality education and social services are hit hardest. Children pay the price, often pushed into the workforce years before they should be or, in the most vulnerable cases, into armed groups or exploitation.",
+    "Powerful Children Colombia was born out of that reality. In May 2021, as COVID-19 deepened economic hardship across the country and youth from working-class neighborhoods were leading nationwide protests against poverty and inequality, four poderosas, Kathy Suarez, Hannah Mora, Johana Suarez and Claudia Daza, held their first meeting to figure out how to help. They landed on a simple idea. The people best positioned to help Colombian children were not outside organizations but the local leaders already doing the work. These leaders knew their communities best and just needed resources to do more.",
+    "That idea became Powerful Children Colombia, officially recognized as a 501(c)(3) in January 2022. Today, we raise funds for Colombian-led partner organizations that give children ages 5 to 17 access to sports, arts and education. What started with one founding partner has grown into a network of three, now reaching 335 children across Colombia. We are only getting started."
+  ],
+  "values": [
+    {
+      "name": "Trust",
+      "body": "We prioritize integrity, responsibility, rigor, and transparency when working with donors, Colombian-led orgs and leaders, and our broader community of supporters."
+    },
+    {
+      "name": "Inclusion",
+      "body": "We value diversity and ground our work in humility, compassion, and solidarity. Our aim is to intentionally add an inclusion lens to everything we do."
+    },
+    {
+      "name": "Joy",
+      "body": "We bring a joyful and child-like spirit to the work we do. This drives our resiliency and keeps us grounded in our commitment to supporting positive opportunities for youth to thrive."
+    },
+    {
+      "name": "Collaboration",
+      "body": "We cannot do this work without the partnership of donors, Colombian-led organizations, the global Colombian community, volunteers, and formal and informal advisors. Community-building is core to our work."
+    },
+    {
+      "name": "Authenticity",
+      "body": "We are unapologetically ourselves. This includes being courageous and creative in our approach, grounded in our values, and staying connected to our mission of enabling youth to embrace their full power and potential."
+    }
+  ],
+  "programsIndex": {
+    "title": "Programs",
+    "intro": "Powerful Children Colombia partners with Colombian-led organizations to help design and fund programs for children. Current programs are led in Pereira, Cabrera, and Santa Marta.",
+    "criteriaIntro": "Powerful Children Colombia identifies Colombian-led partner organizations based on the following criteria:",
+    "criteria": [
+      "The organization's work enables children to embrace their individual power and potential.",
+      "The organization's work serves children ages 5 to 17 in under-resourced parts of Colombia through athletic, cultural or educational programs.",
+      "The organization is registered as an NGO with the Colombian government.",
+      "The organization has a bank account registered under the nonprofit's name.",
+      "The organization has documentation of programs and has demonstrated impact."
+    ],
+    "criteriaOutro": "Powerful Children Colombia works closely with partner organizations to design a scope of work for the potential funding opportunity, which includes project objectives, beneficiary description, activities, roadmap, success metrics, and budget. Programs are expected to deliver regular technical and financial reports to update on progress.",
+    "criteriaContact": "If your organization fits this criteria and you are interested in partnering with us, contact us at info@powerfulchildrencolombia.org."
+  },
+  "partners": [
+    {
+      "name": "Alpha FC",
+      "type": "Athletic club",
+      "relationship": "Runs Un Sueño Que Construye Sueños, a fútbol sala club in Pereira, Risaralda",
+      "place": "Pereira",
+      "href": "/programs/alpha-fc/"
+    },
+    {
+      "name": "Fundación Caminos Nativos",
+      "type": "Nonprofit",
+      "relationship": "Runs Pedalea con Conciencia, a mountain biking academy in Cabrera, Santander",
+      "place": "Santander",
+      "href": "/programs/caminos-nativos/"
+    },
+    {
+      "name": "Fundación Más Que Vencedores",
+      "type": "Nonprofit",
+      "relationship": "Runs Más allá del tablero, a chess club in Santa Marta, Magdalena",
+      "place": "Santa Marta",
+      "href": "/programs/mas-que-vencedores/"
+    },
+    {
+      "name": "Julio Jaramillo",
+      "type": "Funder",
+      "relationship": "Supports Pedalea con Conciencia",
+      "place": "",
+      "href": ""
+    },
+    {
+      "name": "Evergreen Communities, LLC",
+      "type": "Funder",
+      "relationship": "With Julio Jaramillo, has fully funded Pedalea con Conciencia for two years running",
+      "place": "",
+      "href": ""
+    }
+  ],
+  "donate": {
+    "title": "Thank you for investing in this work.",
+    "intro": "Thank you so much for considering a donation! With your financial support, Powerful Children Colombia can reach more children in need. Your resources will support trusted local leaders on the ground who are creating meaningful opportunities that nurture and support children in ways that allow them to embrace their individual power and potential, creating a lasting impact for generations.",
+    "methods": [
+      {
+        "name": "Donorbox",
+        "detail": "Donate using the secure Donorbox form above."
+      },
+      {
+        "name": "Employer matching",
+        "detail": "Your company may match your gift. PCC's EIN is 87-3057220. Ask your employer or write to info@powerfulchildrencolombia.org."
+      },
+      {
+        "name": "By check",
+        "detail": "Make a check out to Powerful Children Colombia and mail it to 2490 Country View Glen, Escondido, CA 92026."
+      },
+      {
+        "name": "Zelle",
+        "detail": "Send your donation to our Zelle account at accounting@powerfulchildrencolombia.org."
+      }
+    ],
+    "volunteerAreas": [
+      "Legal",
+      "Finance",
+      "Communications, Marketing, Social Media",
+      "Research",
+      "Fundraising"
+    ],
+    "certification": "Powerful Children Colombia is a certified 501(c)(3) organization."
+  },
+  "thankYou": {
+    "kicker": "Thank you",
+    "title": "Thank you for investing in this work.",
+    "description": "Thank you for supporting Powerful Children Colombia and the Colombian leaders behind its programs.",
+    "receipt": "If Donorbox sent you here after checkout, a receipt will arrive at the email address you used.",
+    "gratitude": "Thank you for being a vital part of our familia poderosa!",
+    "nextStepsLabel": "Continue exploring Powerful Children Colombia",
+    "programsCta": "Meet the programs",
+    "storiesCta": "Read the stories",
+    "contactIntro": "Questions about your donation? Check your spam folder for the receipt or write to",
+    "imageAlt": "Children and coaches riding bicycles together in Cabrera, Santander",
+    "imagePlace": "Cabrera, Santander"
+  }
+}
