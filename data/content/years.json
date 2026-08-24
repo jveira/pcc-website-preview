@@ -1,0 +1,28 @@
+{
+  "$comment": "Years collection. An empty string means PCC has not published that figure. Public pages omit empty metrics. They never render them as zero, estimate them, or turn the absence into visitor-facing status copy.",
+  "items": [
+    { "year": 2025, "scope": "organization", "children": "233", "raised": "$47,000+", "transparencyChildren": "233", "transparencyRaised": "$48,000", "programSpend": "$29,500", "operating": "$700", "programShare": "98%",
+      "reportPdf": "/assets/documents/pcc-2025-year-in-review.pdf",
+      "reportLabel": "2025 End of Year Report", "storySlug": "2025-year-in-review",
+      "source": "2025 Year in Review: \"we reached 233 children and raised over $47,000\"",
+      "financialSource": "2025 End of Year Report, rounded for the client-approved Transparency comparison" },
+    { "year": 2024, "scope": "organization", "children": "215", "raised": "$43,000+", "transparencyChildren": "215", "transparencyRaised": "$43,500", "programSpend": "$38,700", "operating": "$2,600", "programShare": "94%",
+      "reportPdf": "/assets/documents/pcc-2024-year-in-review.pdf",
+      "reportLabel": "2024 End of Year Report", "storySlug": "2024-year-in-review",
+      "source": "2024 Year in Review: \"we reached 215 children and raised over $43,000\"",
+      "financialSource": "2024 End of Year Report, rounded for the client-approved Transparency comparison" },
+    { "year": 2023, "scope": "organization", "children": "131", "raised": "$40,000+", "transparencyChildren": "131", "transparencyRaised": "$41,500", "programSpend": "$18,000", "operating": "$1,700", "programShare": "91%",
+      "reportPdf": "/assets/documents/pcc-2023-year-in-review.pdf",
+      "reportLabel": "2023 End of Year Report", "storySlug": "2023-year-in-review",
+      "source": "2023 Year in Review: \"the 131 children who are benefiting from these programs\" (November visit); \"We raised over $40,000 in 2023\"",
+      "financialSource": "2023 End of Year Report, rounded for the client-approved Transparency comparison" },
+    { "year": 2022, "scope": "organization", "children": "", "raised": "$62,000+", "transparencyChildren": "21", "transparencyRaised": "$62,700", "programSpend": "$9,800", "operating": "$2,400", "programShare": "80%",
+      "reportPdf": "/assets/documents/pcc-2022-year-in-review.pdf",
+      "reportLabel": "2022 End of Year Report", "storySlug": "2022-year-in-review",
+      "source": "2022 Year in Review: \"raising over $62,000\"",
+      "financialSource": "2022 End of Year Report, rounded for the client-approved Transparency comparison" },
+    { "year": 2022, "scope": "program", "program": "caminos-nativos", "children": "21", "raised": "",
+      "source": "2022 Year in Review: 21 children at the Pedalea con Conciencia launch, Cabrera" }
+  ],
+  "perProgramNote": "Per-program annual splits for 2023 to 2025 are not in PCC's reports. The reports share PCC-wide figures rather than a separate program total until PCC confirms figures."
+}
