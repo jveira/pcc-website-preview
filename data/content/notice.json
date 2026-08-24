@@ -1,0 +1,32 @@
+{
+  "$comment": "Temporary attention notice and dedicated relief page. Event facts are sourced from public reporting of the 2026-08-10 M7.4 earthquake. The fundraising purpose and wording come from PCC team feedback in the owner-supplied Summer 2026 Website Revamp document. The separate Donorbox campaign is colombia-earthquake-relief; the regular Donate page keeps PCC's general campaign.",
+  "enabled": true,
+  "en": {
+    "label": "A note from Colombia · August 10",
+    "body": "A 7.4 magnitude earthquake struck western Colombia on August 10, with its epicenter in San José del Palmar, Chocó. Our hearts are with the families and communities affected. PCC is raising funds to help our partners and their communities recover from the earthquake, and to support locally led emergency relief in affected areas.",
+    "title": "Support earthquake relief",
+    "intro": "A 7.4 magnitude earthquake struck western Colombia on August 10, with its epicenter in San José del Palmar, Chocó. Chocó, Pereira, Manizales, and Cali have all been hit hard, and the situation is still unfolding. Our hearts are with the families, communities, and partners we work alongside there.",
+    "purposeLead": "We're raising funds to:",
+    "purposes": [
+      "Support our partners as they navigate the earthquake's impact on their staff, programs, and the communities they serve.",
+      "Fund locally led disaster response in Chocó, Pereira, Manizales, and Cali, guided by leaders on the ground we know and trust."
+    ],
+    "outro": "We'll share updates on how these funds are being used as our response takes shape. #PowerfulJuntos",
+    "cta": "Support earthquake relief",
+    "ctaHref": "/earthquake-relief/"
+  },
+  "es": {
+    "label": "Una nota desde Colombia · 10 de agosto",
+    "body": "Un terremoto de magnitud 7,4 sacudió el occidente de Colombia el 10 de agosto, con epicentro en San José del Palmar, Chocó. Nuestros corazones están con las familias y comunidades afectadas. PCC está recaudando fondos para ayudar a nuestras organizaciones aliadas y a sus comunidades a recuperarse del terremoto, y para apoyar la respuesta local a la emergencia en las zonas afectadas.",
+    "title": "Apoya la recuperación tras el terremoto",
+    "intro": "Un terremoto de magnitud 7,4 sacudió el occidente de Colombia el 10 de agosto, con epicentro en San José del Palmar, Chocó. Chocó, Pereira, Manizales y Cali han sido golpeadas con fuerza, y la situación sigue desarrollándose. Nuestros corazones están con las familias, comunidades y organizaciones aliadas con las que trabajamos allí.",
+    "purposeLead": "Estamos recaudando fondos para:",
+    "purposes": [
+      "Apoyar a nuestras organizaciones aliadas mientras enfrentan el impacto del terremoto en su personal, sus programas y las comunidades a las que sirven.",
+      "Financiar la respuesta local al desastre en Chocó, Pereira, Manizales y Cali, guiada por líderes en el territorio que conocemos y en quienes confiamos."
+    ],
+    "outro": "Compartiremos actualizaciones sobre cómo se utilizan estos fondos a medida que nuestra respuesta tome forma. #PowerfulJuntos",
+    "cta": "Apoya la respuesta al terremoto",
+    "ctaHref": "/earthquake-relief/"
+  }
+}
