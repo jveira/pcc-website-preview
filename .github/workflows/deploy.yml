@@ -1,0 +1,44 @@
+name: Build and deploy PCC
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/content/**"
+      - "scripts/**"
+      - "admin/**"
+      - "api/**"
+      - "assets/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Stage the shared assets
+        run: |
+          mkdir -p site
+          cp -R assets site/assets
+
+      - name: Build the bilingual site
+        run: python3 scripts/build_site.py
+
+      - name: Verify the generated site
+        run: python3 scripts/check_site.py
+
+      - name: Deploy to the PCC Vercel project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx --yes vercel deploy site --prod --project pcc-website-preview --token "$VERCEL_TOKEN" --yes

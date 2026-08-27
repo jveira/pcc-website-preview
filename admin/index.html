@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>PCC · Content editor</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <div class="admin-app">
+    <header class="admin-bar">
+      <a class="admin-brand" href="/" aria-label="Powerful Children Colombia home">
+        <span class="admin-brand-logo"><img src="/assets/img/pcc-logo-horizontal.png" alt="Powerful Children Colombia"></span>
+        <span><strong>PCC site</strong><small>Edit content</small></span>
+      </a>
+      <div class="admin-bar-actions">
+        <a class="quiet-button admin-preview-link" href="/" target="_blank" rel="noreferrer">View site</a>
+        <span id="connection-status" class="status-pill status-pill--quiet">Not connected</span>
+        <button id="sign-out" class="quiet-button" type="button" hidden>Sign out</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section id="login-view" class="login-view" aria-labelledby="login-title">
+        <div class="login-intro">
+          <p class="eyebrow">PCC site editor</p>
+          <h1 id="login-title">Poderos@s</h1>
+        </div>
+        <form id="login-form" class="login-form">
+          <div class="login-form-heading"><span class="section-number">01</span><div><strong>Sign in to edit</strong><small>Use your editor key.</small></div></div>
+          <label class="visually-hidden" for="editor-user">Editor</label>
+          <input id="editor-user" class="visually-hidden" name="username" type="text" value="PCC editor" autocomplete="username" tabindex="-1" aria-hidden="true">
+          <label for="editor-key">Editor key</label>
+          <input id="editor-key" name="editor-key" type="password" autocomplete="current-password" required placeholder="Enter your editor key">
+          <button class="primary-button" type="submit">Sign in</button>
+          <p id="login-error" class="form-message" role="alert"></p>
+        </form>
+      </section>
+
+      <section id="workspace" class="workspace" hidden>
+        <aside class="workspace-nav" aria-label="Content collections">
+          <div class="workspace-nav-heading">
+            <div class="nav-heading-row"><p class="eyebrow">Site content</p><span class="small-chip">Live editor</span></div>
+          </div>
+          <nav id="collection-nav" class="collection-nav"></nav>
+        </aside>
+
+        <section class="editor-workspace" aria-labelledby="editor-title">
+          <div class="editor-heading">
+            <div>
+              <p id="editor-kicker" class="eyebrow">Collection</p>
+              <h1 id="editor-title">Choose a section</h1>
+              <p id="editor-description" class="editor-description">Select a section on the left.</p>
+            </div>
+            <div class="editor-heading-actions">
+              <label class="locale-select"><span>Language</span><select id="locale-select"><option value="en">English</option><option value="es">Español</option></select></label>
+              <button id="preview-draft" class="secondary-button" type="button" disabled>Preview draft</button>
+              <button id="save-draft" class="primary-button" type="button" disabled>Publish changes</button>
+            </div>
+          </div>
+
+          <div id="editor-message" class="editor-message" role="status" aria-live="polite"></div>
+          <div class="draft-bar" aria-live="polite">
+            <div>
+              <strong id="draft-status">All changes saved</strong>
+              <span id="draft-detail">Changes are saved when you publish.</span>
+            </div>
+            <button id="discard-changes" class="quiet-button" type="button" hidden>Discard changes</button>
+          </div>
+          <div id="record-toolbar" class="record-toolbar" hidden>
+            <div class="record-toolbar-copy"><span>Current item</span><small id="record-count"></small></div>
+            <select id="record-select" aria-label="Current item"></select>
+            <a id="record-preview" class="record-preview-link" href="/" target="_blank" rel="noreferrer" hidden>View page</a>
+          </div>
+          <div id="record-form" class="record-form" hidden></div>
+          <section id="structured-editor" class="structured-editor" hidden aria-label="Structured content editor"></section>
+          <section id="raw-editor" class="raw-editor" hidden aria-labelledby="raw-title">
+            <div class="raw-editor-heading"><div><p class="eyebrow">Advanced source</p><h2 id="raw-title">Source JSON</h2></div><p>Only use this for collection-level content. Keep it valid.</p></div>
+            <details class="source-disclosure">
+              <summary>Show source JSON</summary>
+              <textarea id="raw-json" spellcheck="false" aria-label="Structured JSON content"></textarea>
+            </details>
+          </section>
+          <div id="empty-state" class="empty-state"><span class="empty-state-mark" aria-hidden="true">+</span><p>Choose a section on the left to start editing.</p></div>
+        </section>
+      </section>
+    </main>
+    <section id="draft-preview" class="draft-preview" hidden role="dialog" aria-modal="true" aria-labelledby="draft-preview-title">
+      <div class="draft-preview-backdrop" data-preview-close></div>
+      <div class="draft-preview-panel">
+        <div class="draft-preview-header"><div><p class="eyebrow">Before you save</p><h2 id="draft-preview-title">Draft preview</h2></div><button id="close-draft-preview" class="quiet-button" type="button">Close</button></div>
+        <p id="draft-preview-kicker" class="draft-preview-kicker"></p>
+        <div id="draft-preview-content" class="draft-preview-content"></div>
+      </div>
+    </section>
+    <footer class="admin-footer" aria-label="Editor credit">powered by Luna the pup</footer>
+  </div>
+  <script src="/admin/admin.js" defer></script>
+</body>
+</html>

@@ -1,14 +1,38 @@
 (() => {
   if (window.location.hash) {
-    document.documentElement.style.scrollBehavior = 'auto';
-    window.requestAnimationFrame(() => {
+    const alignHashTarget = (force = false) => {
       let target;
       try { target = document.getElementById(decodeURIComponent(window.location.hash.slice(1))); } catch {}
-      target?.scrollIntoView();
+      if (!target) return;
+      const targetTop = target.getBoundingClientRect().top;
+      const targetOffset = Number.parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0;
+      if (force || targetTop < targetOffset - 2) target.scrollIntoView();
+    };
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.requestAnimationFrame(() => {
+      alignHashTarget(true);
       window.requestAnimationFrame(() => document.documentElement.style.removeProperty('scroll-behavior'));
     });
+    window.addEventListener('load', () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.requestAnimationFrame(() => {
+        alignHashTarget();
+        window.requestAnimationFrame(() => document.documentElement.style.removeProperty('scroll-behavior'));
+      });
+    }, { once: true });
   }
   document.documentElement.classList.add('enhanced');
+
+  const preserveLanguageContext = (link) => {
+    const target = new URL(link.getAttribute('href'), window.location.origin);
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    link.setAttribute('href', `${target.pathname}${target.search}${target.hash}`);
+  };
+  document.querySelectorAll('.lang-toggle').forEach((link) => {
+    preserveLanguageContext(link);
+    link.addEventListener('click', () => preserveLanguageContext(link), { capture: true });
+  });
 
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href]');
@@ -170,7 +194,132 @@
     dockOcclusions.forEach((element) => actionObserver.observe(element));
   }
 
+  const dockCollisionSelector = [
+    '[data-dock-collision]',
+    '.field-gallery-controls button',
+    '.person-bio > summary',
+    '.criteria-disclosure > summary',
+    '.document-list a',
+    '.graph-actions a',
+    '.film-card',
+    '.where-we-work-list a',
+    '.home-section-head a',
+    '.home-proof-links a',
+    '.evidence-archive > summary'
+  ].join(',');
+  const dockCollisionTargets = [...document.querySelectorAll(dockCollisionSelector)];
+  if (mobileDock && dockCollisionTargets.length) {
+    let collisionFrame = 0;
+    const syncDockCollisions = () => {
+      const dockRect = mobileDock.getBoundingClientRect();
+      const collides = dockCollisionTargets.some((element) => {
+        const rect = element.getBoundingClientRect();
+        return rect.bottom > dockRect.top - 8 && rect.top < dockRect.bottom + 8 &&
+          rect.right > dockRect.left && rect.left < dockRect.right;
+      });
+      mobileDock.classList.toggle('is-colliding-action', collides);
+      collisionFrame = 0;
+    };
+    const requestDockCollisionSync = () => {
+      if (!collisionFrame) collisionFrame = window.requestAnimationFrame(syncDockCollisions);
+    };
+    syncDockCollisions();
+    window.addEventListener('scroll', requestDockCollisionSync, { passive: true });
+    window.addEventListener('resize', requestDockCollisionSync);
+  }
+
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Give meaningful editorial groups one shared entrance rhythm. This is added
+  // progressively so the HTML remains complete with JavaScript or motion off.
+  const sequenceSelector = [
+    '.home-metrics',
+    '.home-proof-links',
+    '.partner-logo-grid',
+    '.where-we-work-list',
+    '.fact-grid',
+    '.program-record',
+    '.evidence-panel',
+    '.document-list',
+    '.values-grid',
+    '.team-directory',
+    '.methods-grid',
+    '.continuation-links > div'
+  ].join(',');
+  document.querySelectorAll(sequenceSelector).forEach((group) => {
+    group.classList.add('motion-sequence');
+    [...group.children].forEach((item, index) => {
+      item.style.setProperty('--motion-index', Math.min(index, 5));
+    });
+  });
+
+  document.querySelectorAll('[data-field-gallery]').forEach((gallery) => {
+    const track = gallery.querySelector('[data-gallery-track]');
+    const slides = [...gallery.querySelectorAll('[data-gallery-slide]')];
+    const current = gallery.querySelector('[data-gallery-current]');
+    const previous = gallery.querySelector('[data-gallery-prev]');
+    const next = gallery.querySelector('[data-gallery-next]');
+    if (!track || slides.length < 2) return;
+    let activeIndex = 0;
+    let frame = 0;
+    const setActive = (index) => {
+      activeIndex = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, slideIndex) => {
+        if (slideIndex === activeIndex) slide.setAttribute('aria-current', 'true');
+        else slide.removeAttribute('aria-current');
+      });
+      if (current) current.textContent = String(activeIndex + 1);
+      current?.closest('.field-gallery-status')?.style.setProperty('--gallery-progress', String((activeIndex + 1) / slides.length));
+      if (previous) previous.disabled = activeIndex === 0;
+      if (next) next.disabled = activeIndex === slides.length - 1;
+    };
+    const nearestSlide = () => {
+      const left = track.scrollLeft;
+      let nearest = 0;
+      let distance = Infinity;
+      slides.forEach((slide, index) => {
+        const delta = Math.abs(slide.offsetLeft - track.offsetLeft - left);
+        if (delta < distance) { distance = delta; nearest = index; }
+      });
+      setActive(nearest);
+    };
+    const go = (index) => {
+      const destination = Math.max(0, Math.min(index, slides.length - 1));
+      track.scrollTo({
+        left: slides[destination].offsetLeft - track.offsetLeft,
+        behavior: reducedMotion ? 'auto' : 'smooth'
+      });
+      setActive(destination);
+    };
+    previous?.addEventListener('click', () => go(activeIndex - 1));
+    next?.addEventListener('click', () => go(activeIndex + 1));
+    track.addEventListener('scroll', () => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(nearestSlide);
+    }, { passive: true });
+    setActive(0);
+  });
+
+  // Keep each program name and its place visibly connected. Both the editorial
+  // list and map remain ordinary links when JavaScript or motion is unavailable.
+  document.querySelectorAll('[data-program-map]').forEach((map) => {
+    const section = map.closest('.where-we-work');
+    if (!section) return;
+    const locations = [...section.querySelectorAll('[data-program-location]')];
+    const pins = [...section.querySelectorAll('[data-map-pin]')];
+    const related = [...locations, ...pins];
+    const setActive = (program) => {
+      related.forEach((element) => element.classList.toggle('is-active', element.dataset.programLocation === program || element.dataset.mapPin === program));
+    };
+    const clearActive = () => related.forEach((element) => element.classList.remove('is-active'));
+    related.forEach((element) => {
+      const program = element.dataset.programLocation || element.dataset.mapPin;
+      element.addEventListener('pointerenter', () => setActive(program));
+      element.addEventListener('pointerleave', clearActive);
+      element.addEventListener('focus', () => setActive(program));
+      element.addEventListener('blur', clearActive);
+    });
+  });
 
   document.querySelectorAll('[data-evidence-explorer]').forEach((explorer) => {
     const panels = [...explorer.querySelectorAll('[data-evidence-panel]')];
@@ -178,9 +327,37 @@
     const yearControls = [...explorer.querySelectorAll('[data-year-control]')];
     const status = explorer.querySelector('[data-explorer-status]');
     const archive = explorer.querySelector('.evidence-archive');
-    const scopes = new Set(panels.map((panel) => panel.dataset.scope || 'all'));
-    const years = new Set(panels.map((panel) => panel.dataset.year));
     const panelsWrap = explorer.querySelector('.evidence-panels');
+    const isSpanish = document.documentElement.lang.toLowerCase().startsWith('es');
+    const orderedYears = yearControls.map((control) => control.dataset.yearControl);
+    // A scope/year is selectable only when its panel contains published evidence.
+    const validPanels = panels.filter((panel) => panel.querySelector('.evidence-ledger'));
+    const validYearsByScope = new Map();
+    for (const panel of validPanels) {
+      const scope = panel.dataset.scope || 'all';
+      if (!validYearsByScope.has(scope)) validYearsByScope.set(scope, new Set());
+      validYearsByScope.get(scope).add(panel.dataset.year);
+    }
+    const defaultScope = validYearsByScope.has('all')
+      ? 'all'
+      : scopeControls.find((control) => validYearsByScope.has(control.dataset.scopeControl))?.dataset.scopeControl || 'all';
+    const firstValidYear = (scope) => {
+      const validYears = validYearsByScope.get(scope) || new Set();
+      return orderedYears.find((year) => validYears.has(year)) || [...validYears][0];
+    };
+    const normalizeState = ({ scope, year }) => {
+      const normalizedScope = validYearsByScope.has(scope) ? scope : defaultScope;
+      const validYears = validYearsByScope.get(normalizedScope) || new Set();
+      return {
+        scope: normalizedScope,
+        year: validYears.has(year) ? year : firstValidYear(normalizedScope),
+      };
+    };
+
+    // Do not advertise a program scope that has no published program evidence.
+    for (const control of scopeControls) {
+      control.hidden = !validYearsByScope.has(control.dataset.scopeControl);
+    }
     const thumbs = [];
     for (const tabsNav of explorer.querySelectorAll('.scope-tabs, .year-tabs')) {
       const thumb = document.createElement('span');
@@ -208,10 +385,24 @@
       const params = new URLSearchParams(window.location.search);
       const requestedScope = params.get('scope') || 'all';
       const requestedYear = params.get('year') || yearControls[0]?.dataset.yearControl;
-      return {
-        scope: scopes.has(requestedScope) ? requestedScope : 'all',
-        year: years.has(requestedYear) ? requestedYear : yearControls[0]?.dataset.yearControl,
-      };
+      return normalizeState({ scope: requestedScope, year: requestedYear });
+    };
+
+    const replaceInvalidUrlState = (state) => {
+      const url = new URL(window.location.href);
+      const hasState = url.searchParams.has('scope') || url.searchParams.has('year');
+      if (!hasState) return;
+      let changed = false;
+      if (scopeControls.length) {
+        if (url.searchParams.get('scope') !== state.scope) changed = true;
+        url.searchParams.set('scope', state.scope);
+      } else if (url.searchParams.has('scope')) {
+        url.searchParams.delete('scope');
+        changed = true;
+      }
+      if (url.searchParams.get('year') !== state.year) changed = true;
+      url.searchParams.set('year', state.year);
+      if (changed) window.history.replaceState({}, '', url);
     };
 
     const render = ({ scope, year }, announce = false) => {
@@ -226,11 +417,16 @@
       for (const control of scopeControls) {
         if (control.dataset.scopeControl === scope) control.setAttribute('aria-current', 'true');
         else control.removeAttribute('aria-current');
+        const targetYear = (validYearsByScope.get(control.dataset.scopeControl) || new Set()).has(year)
+          ? year
+          : firstValidYear(control.dataset.scopeControl);
         const url = new URL(control.href, window.location.href);
-        url.searchParams.set('year', year);
+        if (targetYear) url.searchParams.set('year', targetYear);
         control.href = `${url.pathname}${url.search}${url.hash}`;
       }
+      const validYears = validYearsByScope.get(scope) || new Set();
       for (const control of yearControls) {
+        control.hidden = !validYears.has(control.dataset.yearControl);
         if (control.dataset.yearControl === year) control.setAttribute('aria-current', 'true');
         else control.removeAttribute('aria-current');
         const url = new URL(control.href);
@@ -239,7 +435,9 @@
       }
       if (status) {
         const scopeName = scopeControls.find((control) => control.dataset.scopeControl === scope)?.textContent.trim();
-        status.textContent = announce ? (scopeName ? `Showing ${scopeName}, ${year}.` : `Showing ${year}.`) : '';
+        if (!announce) status.textContent = '';
+        else if (isSpanish) status.textContent = scopeName ? `Mostrando ${scopeName}, ${year}.` : `Mostrando ${year}.`;
+        else status.textContent = scopeName ? `Showing ${scopeName}, ${year}.` : `Showing ${year}.`;
       }
       if (liquid) {
         const endHeight = panelsWrap.offsetHeight;
@@ -256,15 +454,21 @@
       }
       syncThumbs();
       if (announce && selected && !reducedMotion) {
-        selected.animate(
-          [{ opacity: .35, transform: 'translate3d(0,8px,0)' }, { opacity: 1, transform: 'none' }],
-          { duration: 240, easing: 'cubic-bezier(.16,1,.3,1)' });
+        const parts = [
+          selected.querySelector('header'),
+          selected.querySelector('.evidence-ledger'),
+          selected.querySelector('.evidence-note'),
+          selected.querySelector('.evidence-source')
+        ].filter(Boolean);
+        parts.forEach((part, index) => part.animate(
+          [{ transform: 'translate3d(0,12px,0)' }, { transform: 'none' }],
+          { duration: 420, delay: index * 55, easing: 'cubic-bezier(.16,1,.3,1)' }));
       }
     };
 
     const select = (next, push = true) => {
       const current = readState();
-      const state = { scope: next.scope || current.scope, year: next.year || current.year };
+      const state = normalizeState({ scope: next.scope || current.scope, year: next.year || current.year });
       if (push) {
         const url = new URL(window.location.href);
         if (scopeControls.length) url.searchParams.set('scope', state.scope);
@@ -281,9 +485,15 @@
     yearControls.forEach((control) => control.addEventListener('click', (event) => {
       event.preventDefault(); select({ year: control.dataset.yearControl });
     }));
-    window.addEventListener('popstate', () => render(readState(), true));
+    window.addEventListener('popstate', () => {
+      const state = readState();
+      replaceInvalidUrlState(state);
+      render(state, true);
+    });
     archive?.removeAttribute('open');
-    render(readState());
+    const initialState = readState();
+    replaceInvalidUrlState(initialState);
+    render(initialState);
   });
 
   document.querySelectorAll('[data-local-navigation]').forEach((strip) => {
@@ -384,7 +594,7 @@
 
   if (reducedMotion) return;
 
-  const reveals = [...document.querySelectorAll('.reveal, .media-reveal')];
+  const reveals = [...document.querySelectorAll('.reveal, .media-reveal, .motion-sequence')];
   if (!reveals.length || !('IntersectionObserver' in window)) return;
 
   for (const element of reveals) {
