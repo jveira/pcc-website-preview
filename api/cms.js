@@ -100,7 +100,7 @@ async function createDraft(files, message) {
       title: message || 'Update PCC content',
       head: branch,
       base,
-      body: `This draft was created in the PCC Content Editor.\n\nChanged files:\n${Object.keys(files).map((path) => `- ${path}`).join('\n')}\n\nPlease verify copy, sources, media consent, English/Spanish parity, and the generated preview before merging.`
+      body: `This change was published from the PCC Content Editor.\n\nChanged files:\n${Object.keys(files).map((path) => `- ${path}`).join('\n')}\n\nThe branch and pull request are retained as the change record. The repository workflow runs the site checks and Vercel deployment.`
     })
   });
   // The editor is intended for the PCC team, so a successful save publishes
