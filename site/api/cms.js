@@ -13,7 +13,7 @@ function send(res, status, body) {
 function authorized(req) {
   const provided = (req.headers.authorization || '').replace(/^Bearer\s+/i, '') || req.headers['x-cms-key'] || '';
   if (!provided) return false;
-  const configured = [process.env.CMS_EDITOR_KEY || '', ...(process.env.CMS_EDITOR_KEYS || '').split(/[\s,]+/), process.env.CMS_EDITOR_QA_KEY || '']
+  const configured = [process.env.CMS_EDITOR_KEY || '', ...(process.env.CMS_EDITOR_KEYS || '').split(/[\s,]+/)]
     .map((key) => key.trim())
     .filter(Boolean);
   return configured.some((expected) => {
