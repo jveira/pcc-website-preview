@@ -41,5 +41,13 @@ jobs:
       - name: Deploy to the PCC Vercel project
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        # Keep the deployer on the CLI version that accepts the current Vercel token format.
-        run: npx --yes vercel@59.7.0 deploy site --prod --project pcc-website-preview --token "$VERCEL_TOKEN" --yes
+        run: |
+          python3 - <<'PY'
+          import hashlib, os
+          token = os.environ.get("VERCEL_TOKEN", "")
+          print("Vercel token diagnostic: length=%d sha256=%s contains_stars=%s" % (
+              len(token), hashlib.sha256(token.encode()).hexdigest(), "*" in token
+          ))
+          PY
+          # Keep the deployer on the CLI version that accepts the current Vercel token format.
+          npx --yes vercel@59.7.0 deploy site --prod --project pcc-website-preview --token "$VERCEL_TOKEN" --yes
