@@ -1,33 +1,95 @@
 {
   "$comment": "People collection — verbatim from powerfulchildrencolombia.org/our-team/ (bios) and the 2023 Year in Review (Ambassador). Partner leaders from program pages.",
   "team": [
-    { "name": "Kathy Suarez", "role": "President", "portrait": "kathy-suarez.jpg",
-      "bio": "Kathy was born in Bogotá, Colombia, and moved to the U.S. at age 12. She studied Finance, Communication, and Retail Studies at Santa Clara University. She worked in management consulting for a decade, helping organizations across the U.S. and U.K. through systemic cultural and organizational change. In 2016, as a self-taught DJ, she started an LA chapter of a grassroots organization focused on bringing more women, people of color, and LGBTQIA+ people into the music industry. That experience led her into a career in Diversity, Equity, and Inclusion, where she's led efforts at The Walt Disney Company and Netflix. She is currently a Senior Program Manager at Netflix, supporting the LATAM Talent leadership team in designing and implementing the region's Talent strategy." },
-    { "name": "Hannah Mora", "role": "Secretary", "portrait": "hannah-mora.jpg",
-      "bio": "Hannah was born in the U.S. to her American mother and Colombian father, who immigrated to the U.S. as a young adult. She served in the Jesuit Volunteer Corps and worked at nonprofits in Los Angeles and New York City serving individuals experiencing homelessness, survivors of domestic violence, sex trafficking, and related forms of gender violence, and individuals and families with low-income. She earned her M.Sc. in Global Affairs from New York University and her B.A. in theology and religious studies from the University of San Francisco. She currently works in philanthropy and serves as president-elect on the University of San Francisco Alumni Board and is a member of the Southern California Regional Council." },
-    { "name": "Johana Suarez", "role": "Treasurer", "portrait": "johana-suarez.jpg",
-      "bio": "Johana is a native Colombian that moved to the U.S. as a teenager. She works in the Educational Services sector for an elementary school in a low-income community. Her students are incredibly resilient. This means they come to school with smiles and eagerness to learn despite the challenges they may already be facing at such a young age. She is inspired by this community to help make a difference in the lives of children and those around them. In her free time, she enjoys spending time with her family, her three children, and her fur-baby. \"I am a strong believer in the good we want to do with this organization. In creating a better future for the children of Colombia, to see children dream again and work towards living a better life.\"" },
-    { "name": "Claudia Daza", "role": "Senior Program Director", "portrait": "claudia-daza.jpg",
-      "bio": "Claudia is passionate about helping others. Born and raised in Colombia, she moved to the US at age 16 and pursued a career in Industrial Engineering. As an engineer, she has helped several world-renowned organizations to reach a higher potential through quality engineering, optimization, design, and automation of processes, and agile process/application architecture and development. She has always enjoyed mentoring and supporting others in the pursuit of a passion or a better quality of life. Claudia loves biking and has found in the sport a means to connect with herself and her surroundings and to continue to contribute to the betterment of the lives of those in need. Due to the pandemic, she had the opportunity to live in Colombia again and has now the privilege to be inspired daily by the beauty and potential of the children of her native land." },
-    { "name": "Sandra Orozco Gomez", "role": "Program Director", "portrait": "sandra-orozco-gomez.jpg",
-      "bio": "\"My name is Sandra, a professional in Family Development from the University of Caldas Manizales and Director of Programs at Powerful Children Colombia. Born, raised, and a resident of Colombia with ten years of work experience in early childhood with vulnerable populations in different departments of Colombia. I chose to be part of Powerful Children Colombia because I know that it is part of my mission in this life to serve others and especially to contribute to strengthening family ties and life projects for children and adolescents in this country. There is nothing quite as humbling and rewarding as seeing your hard work transform the lives of many. Nothing gets done by one person alone, which means we have to join forces to make the changes we want to see in this world. Thank you for supporting Powerful Children Colombia because children are truly the future!\"" },
-    { "name": "Adriana Suarez", "role": "Program Director", "portrait": "adriana-suarez.jpg",
-      "bio": "Adriana is an experienced professional in the field of administration and operations. Her passion for mission-driven work is what inspired her to join Powerful Children Colombia. She will help our team identify and manage current and future partnerships in Colombia and will help us execute operational rigor across the board. \"I am happy to join the Powerful Children Colombia team to help improve the lives of Colombian children who need it most. I will do my best to contribute to the success of our mission to improve the lives of Colombian children and help them have brighter future.\"" },
-    { "name": "Julian Mesa", "role": "Accountant & Program Director", "portrait": "julian-mesa.jpg",
-      "bio": "\"My name is Julian Mesa, resident and native of Colombia. I'm inspired by a vision of a world full of solidarity and service where we support each other as a community in order to progress together towards a better future. I am an athlete who practices finswimming and through this sport have broken barriers and shifted my own mindset on what I am capable of, which for many might feel inaccessible due to invisible limitations or walls. Powerful Children Colombia bets on children, sports, and culture. In my experience, becoming an athlete was the element that gave me a balanced life, and that, combined with my profession that I love so much, has taught me discipline, perseverance, and the ability to strive for unimaginable goals. It's with this formula of love, giving, and compromise that the PCC team, its collaborators, and partners will provide an opportunity to young artists and athletes.\"" }
+    {
+      "name": "Kathy Suarez",
+      "role": "President",
+      "portrait": "kathy-suarez.jpg",
+      "bio": "Kathy was born in Bogotá, Colombia, and moved to the U.S. at age 12. She studied Finance, Communication, and Retail Studies at Santa Clara University. She worked in management consulting for a decade, helping organizations across the U.S. and U.K. through systemic cultural and organizational change. In 2016, as a self-taught DJ, she started an LA chapter of a grassroots organization focused on bringing more women, people of color, and LGBTQIA+ people into the music industry. That experience led her into a career in Diversity, Equity, and Inclusion, where she's led efforts at The Walt Disney Company and Netflix. She is currently a Senior Program Manager at Netflix, supporting the LATAM Talent leadership team in designing and implementing the region's Talent strategy."
+    },
+    {
+      "name": "Hannah Mora",
+      "role": "Secretary",
+      "portrait": "hannah-mora.jpg",
+      "bio": "Hannah was born in the U.S. to her American mother and Colombian father, who immigrated to the U.S. as a young adult. She served in the Jesuit Volunteer Corps and worked at nonprofits in Los Angeles and New York City serving individuals experiencing homelessness, survivors of domestic violence, sex trafficking, and related forms of gender violence, and individuals and families with low-income. She earned her M.Sc. in Global Affairs from New York University and her B.A. in theology and religious studies from the University of San Francisco. She currently works at a leading philanthropic institution, on the humanitarian prize team."
+    },
+    {
+      "name": "Johana Suarez",
+      "role": "Treasurer",
+      "portrait": "johana-suarez.jpg",
+      "bio": "Johana is a native Colombian that moved to the U.S. as a teenager. She works in the Educational Services sector for an elementary school in a low-income community. Her students are incredibly resilient. This means they come to school with smiles and eagerness to learn despite the challenges they may already be facing at such a young age. She is inspired by this community to help make a difference in the lives of children and those around them. In her free time, she enjoys spending time with her family, her three children, and her fur-baby. \"I am a strong believer in the good we want to do with this organization. In creating a better future for the children of Colombia, to see children dream again and work towards living a better life.\""
+    },
+    {
+      "name": "Claudia Daza",
+      "role": "Senior Program Director",
+      "portrait": "claudia-daza.jpg",
+      "bio": "Claudia is passionate about helping others. Born and raised in Colombia, she moved to the US at age 16 and pursued a career in Industrial Engineering. As an engineer, she has helped several world-renowned organizations to reach a higher potential through quality engineering, optimization, design, and automation of processes, and agile process/application architecture and development. She has always enjoyed mentoring and supporting others in the pursuit of a passion or a better quality of life. Claudia loves biking and has found in the sport a means to connect with herself and her surroundings and to continue to contribute to the betterment of the lives of those in need. Due to the pandemic, she had the opportunity to live in Colombia again and has now the privilege to be inspired daily by the beauty and potential of the children of her native land."
+    },
+    {
+      "name": "Sandra Orozco Gomez",
+      "role": "Program Director",
+      "portrait": "sandra-orozco-gomez.jpg",
+      "bio": "\"My name is Sandra, a professional in Family Development from the University of Caldas Manizales and Director of Programs at Powerful Children Colombia. Born, raised, and a resident of Colombia with ten years of work experience in early childhood with vulnerable populations in different departments of Colombia. I chose to be part of Powerful Children Colombia because I know that it is part of my mission in this life to serve others and especially to contribute to strengthening family ties and life projects for children and adolescents in this country. There is nothing quite as humbling and rewarding as seeing your hard work transform the lives of many. Nothing gets done by one person alone, which means we have to join forces to make the changes we want to see in this world. Thank you for supporting Powerful Children Colombia because children are truly the future!\""
+    },
+    {
+      "name": "Adriana Suarez",
+      "role": "Program Director",
+      "portrait": "adriana-suarez.jpg",
+      "bio": "Adriana is an experienced professional in the field of administration and operations. Her passion for mission-driven work is what inspired her to join Powerful Children Colombia. She will help our team identify and manage current and future partnerships in Colombia and will help us execute operational rigor across the board. \"I am happy to join the Powerful Children Colombia team to help improve the lives of Colombian children who need it most. I will do my best to contribute to the success of our mission to improve the lives of Colombian children and help them have brighter future.\""
+    },
+    {
+      "name": "Julian Mesa",
+      "role": "Accountant & Program Director",
+      "portrait": "julian-mesa.jpg",
+      "bio": "\"My name is Julian Mesa, resident and native of Colombia. I'm inspired by a vision of a world full of solidarity and service where we support each other as a community in order to progress together towards a better future. I am an athlete who practices finswimming and through this sport have broken barriers and shifted my own mindset on what I am capable of, which for many might feel inaccessible due to invisible limitations or walls. Powerful Children Colombia bets on children, sports, and culture. In my experience, becoming an athlete was the element that gave me a balanced life, and that, combined with my profession that I love so much, has taught me discipline, perseverance, and the ability to strive for unimaginable goals. It's with this formula of love, giving, and compromise that the PCC team, its collaborators, and partners will provide an opportunity to young artists and athletes.\""
+    }
   ],
   "collaborators": [
-    { "name": "Enzo Peto", "role": "English Teacher" },
-    { "name": "Alejandro Ochoa", "role": "Technology Advisory" },
-    { "name": "Ivana Rojas", "role": "Ambassador" },
-    { "name": "Javier Espinosa", "role": "Webmaster" },
-    { "name": "Jaime Veira", "role": "Digital Strategy" },
-    { "name": "Julicore", "role": "Logo design" }
+    {
+      "name": "Enzo Peto",
+      "role": "English Teacher"
+    },
+    {
+      "name": "Alejandro Ochoa",
+      "role": "Technology Advisory"
+    },
+    {
+      "name": "Ivana Rojas",
+      "role": "Ambassador"
+    },
+    {
+      "name": "Javier Espinosa",
+      "role": "Webmaster"
+    },
+    {
+      "name": "Jaime Veira",
+      "role": "Digital Strategy"
+    },
+    {
+      "name": "Julicore",
+      "role": "Logo design"
+    }
   ],
   "partnerLeaders": [
-    { "name": "Jorge Esteban Suárez", "role": "Co-founder, Alpha FC", "program": "alpha-fc" },
-    { "name": "Andrea González Londoño", "role": "Co-founder, Alpha FC", "program": "alpha-fc" },
-    { "name": "Paola Arenas Duarte", "role": "Founder, Fundación Caminos Nativos", "program": "caminos-nativos" },
-    { "name": "Fernando Pavón", "role": "Founder, Fundación Más Que Vencedores", "program": "mas-que-vencedores" }
+    {
+      "name": "Jorge Esteban Suárez",
+      "role": "Co-founder, Alpha FC",
+      "program": "alpha-fc"
+    },
+    {
+      "name": "Andrea González Londoño",
+      "role": "Co-founder, Alpha FC",
+      "program": "alpha-fc"
+    },
+    {
+      "name": "Paola Arenas Duarte",
+      "role": "Founder, Fundación Caminos Nativos",
+      "program": "caminos-nativos"
+    },
+    {
+      "name": "Fernando Pavón",
+      "role": "Founder, Fundación Más Que Vencedores",
+      "program": "mas-que-vencedores"
+    }
   ]
 }
