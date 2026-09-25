@@ -62,8 +62,8 @@ def head(meta, title, description, path, noindex=False):
         "/programs/alpha-fc/": ("og-alpha-fc.jpg", "Alpha FC participants in Pereira, with the Powerful Children Colombia logo"),
         "/programs/caminos-nativos/": ("og-caminos-nativos.jpg", "Caminos Nativos riders in Cabrera, with the Powerful Children Colombia logo"),
         "/programs/mas-que-vencedores/": ("og-mas-que-vencedores.jpg", "Más Que Vencedores chess participants in Santa Marta, with the Powerful Children Colombia logo"),
-        "/earthquake-relief/": ("og-earthquake-relief.jpg", "Earthquake relief led locally in Colombia, from Powerful Children Colombia"),
-        "/es/earthquake-relief/": ("og-earthquake-relief-es.jpg", "Ayuda por el terremoto liderada localmente en Colombia, de Powerful Children Colombia"),
+        "/earthquake-relief/": ("og-earthquake-relief.jpg", "PCC earthquake response and long-term recovery in Colombia"),
+        "/es/earthquake-relief/": ("og-earthquake-relief-es.jpg", "Respuesta y recuperación tras el terremoto en Colombia, de Powerful Children Colombia"),
     }
     og_filename, og_alt = program_previews.get(
         path,

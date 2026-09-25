@@ -953,8 +953,8 @@ def earthquake_relief():
       <p class="form-fallback"><a class="underlink" href="{esc(meta['earthquakeDonorboxUrl'])}">{esc(fallback)}</a></p>
     </div>
   </section>"""
-    relief_title = "Colombia earthquake relief" if LOCALE == "en" else "Ayuda por el terremoto en Colombia"
-    write("/earthquake-relief/", f"{relief_title} | {meta['name']}", n["responseIntro"], "/earthquake-relief/", "Programs / Colombia earthquake relief", body)
+    relief_title = "Colombia earthquake response" if LOCALE == "en" else "Respuesta al terremoto en Colombia"
+    write("/earthquake-relief/", f"{relief_title} | {meta['name']}", n["metaDescription"], "/earthquake-relief/", "Programs / Colombia earthquake relief", body)
 
 
 def thank_you():
