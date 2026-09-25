@@ -715,12 +715,41 @@ html:not(.enhanced) .evidence-explorer > .evidence-panels:not(.evidence-panels--
 .donate-copy { position: sticky; top: 64px; padding: clamp(40px,4.25vw,60px); }
 .donate-copy h1 { margin-top: 18px; max-width: 13ch; font-size: clamp(42px,4.5vw,60px); line-height: .97; }
 .donate-intro { margin-top: 22px; max-width: 51ch; color: var(--body); font-size: 17px; line-height: 1.62; }
-.earthquake-intro { margin-top: 18px; max-width: 53ch; color: var(--body); font-size: 16px; line-height: 1.62; }
-.earthquake-purpose-lead { margin: 22px 0 0; color: var(--ink); font-size: 15px; line-height: 1.5; font-weight: 650; }
-.earthquake-purposes { margin: 8px 0 0; padding: 0; list-style: none; max-width: 54ch; }
-.earthquake-purposes li { position: relative; padding: 14px 0 14px 24px; border-top: 1px solid rgba(17,17,17,.24); color: var(--body); font-size: 15px; line-height: 1.52; }
-.earthquake-purposes li::before { content: ""; position: absolute; left: 0; top: 21px; width: 8px; height: 8px; border-radius: 50%; background: var(--rojo); }
-.earthquake-outro { max-width: 54ch; margin: 20px 0 0; color: var(--body); font-size: 15px; line-height: 1.55; font-weight: 650; }
+.relief-report-hero { display: grid; grid-template-columns: minmax(0,7fr) minmax(340px,5fr); min-height: min(720px,calc(100svh - 64px)); background: var(--sol-tint); }
+.relief-report-title { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(42px,6vw,88px) var(--gutter); border-right: 1px solid var(--ink); }
+.relief-report-title h1 { max-width: 9.5ch; font-size: clamp(58px,8.2vw,122px); line-height: .86; letter-spacing: -.075em; }
+.relief-report-title::after { content: ""; width: clamp(120px,20vw,280px); height: 8px; background: var(--pcc-gold); border-right: clamp(34px,5vw,70px) solid var(--rojo); border-left: clamp(34px,5vw,70px) solid var(--pcc-sky); }
+.relief-report-intro { align-self: end; padding: clamp(34px,5vw,72px) var(--gutter); }
+.relief-report-intro > p:nth-child(2) { margin-top: 18px; max-width: 48ch; color: var(--body); font-size: clamp(18px,1.65vw,24px); line-height: 1.48; }
+.relief-local-nav { position: sticky; top: 57px; z-index: 40; display: grid; grid-template-columns: repeat(3,1fr); background: rgba(255,255,255,.94); border-bottom: 1px solid var(--ink); backdrop-filter: blur(14px); }
+.relief-local-nav a { min-height: 48px; display: flex; align-items: center; justify-content: center; padding: 10px 16px; border-right: 1px solid var(--hairline); text-align: center; }
+.relief-local-nav a:last-child { border-right: 0; background: var(--pcc-gold); color: var(--ink); }
+.relief-principles, .relief-response { display: grid; grid-template-columns: minmax(230px,4fr) minmax(0,8fr); }
+.relief-section-heading { padding: clamp(34px,4.5vw,66px) var(--gutter); border-right: 1px solid var(--ink); }
+.relief-section-heading h2 { position: sticky; top: 132px; margin-top: 14px; max-width: 8ch; font-size: clamp(42px,5.5vw,78px); line-height: .94; letter-spacing: -.06em; }
+.relief-principle-list, .relief-partner-list { margin: 0; padding: 0; list-style: none; }
+.relief-principle { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: clamp(14px,2vw,28px); padding: clamp(28px,4vw,54px) var(--gutter); border-bottom: 1px solid var(--hairline); }
+.relief-principle:last-child { border-bottom: 0; }
+.relief-index { padding-top: 4px; color: var(--meta); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; }
+.relief-principle h3, .relief-partner h3 { font-size: clamp(24px,3vw,38px); line-height: 1; letter-spacing: -.045em; }
+.relief-principle p { margin-top: 12px; max-width: 62ch; color: var(--body); font-size: 16px; line-height: 1.65; }
+.relief-response { background: #FFFFFF; }
+.relief-partner { padding: clamp(32px,4.5vw,62px) var(--gutter); border-bottom: 1px solid var(--ink); }
+.relief-partner:last-child { border-bottom: 0; }
+.relief-partner-heading { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: clamp(14px,2vw,28px); }
+.relief-partner-heading h3 a { color: inherit; }
+.relief-partner-heading p { margin-top: 8px; color: var(--meta); font: 11px/1.45 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.relief-partner-copy { margin: 24px 0 0 92px; max-width: 72ch; }
+.relief-partner-copy > p { color: var(--body); font-size: 16px; line-height: 1.72; }
+.relief-partner-link { display: inline-flex; gap: 12px; margin-top: 18px; font-size: 13px; font-weight: 650; }
+.relief-commitment { padding: clamp(56px,8vw,118px) var(--gutter); background: var(--ink); color: #FFFFFF; }
+.relief-commitment .section-kicker { color: rgba(255,255,255,.62); }
+.relief-commitment > p:last-child { margin-top: 20px; max-width: 22ch; font-size: clamp(34px,5vw,72px); line-height: 1.02; letter-spacing: -.055em; }
+.relief-donate { display: grid; grid-template-columns: minmax(320px,5fr) minmax(480px,7fr); align-items: start; background: var(--sol-tint); }
+.relief-donate-copy { position: sticky; top: 112px; padding: clamp(40px,4.25vw,60px); }
+.relief-donate-copy h2 { margin-top: 18px; max-width: 10ch; font-size: clamp(42px,4.5vw,64px); line-height: .96; letter-spacing: -.055em; }
+.relief-donate-copy > p:nth-child(3) { margin-top: 20px; max-width: 48ch; color: var(--body); font-size: 15px; line-height: 1.6; }
+.relief-donate-copy .text-link { display: inline-flex; margin-top: 24px; }
 .donate-trust { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 34px 0 0; border-top: 1px solid rgba(17,17,17,.28); }
 .donate-trust > div { padding: 18px 12px 0 0; }
 .donate-trust dt { font-size: clamp(22px,2.6vw,34px); font-weight: 600; letter-spacing: -.04em; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -1139,6 +1168,10 @@ html:not(.enhanced) .evidence-explorer > .evidence-panels:not(.evidence-panels--
 }
 
 @media (min-width: 700px) and (max-width: 999px) {
+  .relief-report-hero { grid-template-columns: minmax(0,6fr) minmax(300px,4fr); }
+  .relief-report-title h1 { font-size: clamp(62px,9vw,90px); }
+  .relief-principles, .relief-response { grid-template-columns: minmax(210px,3fr) minmax(0,7fr); }
+  .relief-donate { grid-template-columns: minmax(280px,4fr) minmax(430px,6fr); }
   .home-program-list { grid-template-columns: repeat(2,1fr); }
   .home-program:nth-child(3) { grid-column: 1 / -1; border-left: 0; border-top: 0; }
   .home-support { grid-template-columns: 1fr; }
@@ -1160,6 +1193,29 @@ html:not(.enhanced) .evidence-explorer > .evidence-panels:not(.evidence-panels--
   .motion-ready .media-reveal .img-slot > img { transform: scale(1.035); }
   .motion-ready .media-reveal.is-visible .img-slot > img { transform: scale(1); }
   .home-hero, .home-proof, .home-support { grid-template-columns: 1fr; }
+  .relief-report-hero { grid-template-columns: 1fr; min-height: 0; }
+  .relief-report-title { min-height: 62svh; padding: 34px var(--gutter); border-right: 0; border-bottom: 1px solid var(--ink); }
+  .relief-report-title h1 { max-width: 8.5ch; font-size: clamp(54px,17vw,82px); }
+  .relief-report-title::after { height: 6px; }
+  .relief-report-intro { padding: 34px var(--gutter) 40px; }
+  .relief-report-intro > p:nth-child(2) { font-size: 17px; }
+  .relief-local-nav { top: 57px; grid-template-columns: 1fr 1fr; }
+  .relief-local-nav a { min-height: 44px; padding: 8px 10px; font-size: 9px; }
+  .relief-local-nav a:last-child { grid-column: 1/-1; border-top: 1px solid var(--hairline); }
+  .relief-principles, .relief-response { grid-template-columns: 1fr; }
+  .relief-section-heading { padding: 34px var(--gutter) 28px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .relief-section-heading h2 { position: static; max-width: none; font-size: 44px; }
+  .relief-principle { grid-template-columns: 42px minmax(0,1fr); padding: 28px var(--gutter); }
+  .relief-principle h3, .relief-partner h3 { font-size: 25px; }
+  .relief-principle p, .relief-partner-copy > p { font-size: 15px; }
+  .relief-partner { padding: 32px var(--gutter); }
+  .relief-partner-heading { grid-template-columns: 42px minmax(0,1fr); }
+  .relief-partner-copy { margin: 20px 0 0; }
+  .relief-commitment { padding: 54px var(--gutter); }
+  .relief-commitment > p:last-child { font-size: 36px; }
+  .relief-donate { grid-template-columns: 1fr; }
+  .relief-donate-copy { position: static; padding: 40px var(--gutter); border-bottom: 1px solid var(--ink); }
+  .relief-donate-copy h2 { font-size: 42px; }
   .home-hero { min-height: 0; }
   .home-hero-media .frame { flex: none; min-height: 0; aspect-ratio: 3 / 2; }
   .home-caption { padding-top: 8px; padding-bottom: 8px; min-height: 33px; }

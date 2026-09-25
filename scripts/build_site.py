@@ -900,16 +900,55 @@ def earthquake_relief():
     regular_label = "Make a general donation" if LOCALE == "en" else "Haz una donación general"
     relief_donate_label = "Donate to earthquake relief" if LOCALE == "en" else "Dona para esta emergencia"
     fallback = "If the form does not load, donate directly on Donorbox." if LOCALE == "en" else "Si el formulario no carga, dona directamente en Donorbox."
-    purposes = "".join(f"<li>{esc(item)}</li>" for item in n["purposes"])
+    principles = "".join(f"""
+      <li class="relief-principle reveal"><span class="relief-index">{index:02d}</span>
+        <div><h3>{esc(item['title'])}</h3><p>{esc(item['body'])}</p></div></li>"""
+        for index, item in enumerate(n["principles"], 1))
+    response_items = []
+    for index, item in enumerate(n["responses"], 1):
+        name = esc(item["name"])
+        if item.get("href"):
+            name = f'<a class="underlink" href="{esc(item["href"])}">{name}</a>'
+        program_link = ""
+        if item["name"] == "Alpha FC":
+            label = "Read about the program" if LOCALE == "en" else "Conoce el programa"
+            program_link = f'<a class="relief-partner-link" href="/programs/alpha-fc/">{esc(label)} <span aria-hidden="true">→</span></a>'
+        response_items.append(f"""
+      <article class="relief-partner reveal" id="response-{index}">
+        <div class="relief-partner-heading"><span class="relief-index">{index:02d}</span>
+          <div><h3>{name}</h3><p>{esc(item['location'])}</p></div></div>
+        <div class="relief-partner-copy"><p>{es(item['body'])}</p>{program_link}</div>
+      </article>""")
+    response_items = "".join(response_items)
+    overview_label = "What happened" if LOCALE == "en" else "Qué ocurrió"
+    overview_cta = "See our response" if LOCALE == "en" else "Conoce nuestra respuesta"
+    donate_heading = "Help communities recover and rebuild" if LOCALE == "en" else "Ayuda a las comunidades a recuperarse y reconstruir"
+    commitment_label = "Long-term commitment" if LOCALE == "en" else "Compromiso a largo plazo"
     body = f"""
-  <section class="donate-hero earthquake-relief-hero rule-section">
-    <div class="donate-copy reveal"><p class="section-kicker">{esc(kicker)}</p><h1>{esc(n['title'])}</h1>
-      <p class="earthquake-intro">{esc(n['intro'])}</p>
-      <p class="earthquake-purpose-lead">{esc(n['purposeLead'])}</p>
-      <ul class="earthquake-purposes">{purposes}</ul>
-      <p class="earthquake-outro">{esc(n['outro'])}</p>
-      <div class="masthead-actions" data-dock-occlusion><a class="btn btn-donate" href="#donation-form" data-relief-form-link>{esc(relief_donate_label)}</a><a class="text-link" href="/donate/">{esc(regular_label)} <span aria-hidden="true">→</span></a></div>
+  <section class="relief-report-hero rule-section">
+    <div class="relief-report-title reveal"><p class="section-kicker">{esc(kicker)}</p><h1>{esc(n['responseTitle'])}</h1></div>
+    <div class="relief-report-intro reveal"><p class="section-kicker">{esc(overview_label)}</p>
+      <p>{es(n['responseIntro'])}</p>
+      <div class="masthead-actions" data-dock-occlusion><a class="btn" href="#response">{esc(overview_cta)}</a><a class="text-link" href="#donation-form" data-relief-form-link>{esc(relief_donate_label)} <span aria-hidden="true">↓</span></a></div>
     </div>
+  </section>
+  <nav class="relief-local-nav meta" aria-label="{esc(n['responseTitle'])}">
+    <a href="#principles">{esc(n['principlesTitle'])}</a><a href="#response">{esc(n['responseSectionTitle'])}</a><a href="#donation-form">{esc(relief_donate_label)}</a>
+  </nav>
+  <section class="relief-principles rule-section" id="principles">
+    <header class="relief-section-heading reveal"><p class="section-kicker">01</p><h2>{esc(n['principlesTitle'])}</h2></header>
+    <ol class="relief-principle-list">{principles}</ol>
+  </section>
+  <section class="relief-response rule-section" id="response">
+    <header class="relief-section-heading reveal"><p class="section-kicker">02</p><h2>{esc(n['responseSectionTitle'])}</h2></header>
+    <div class="relief-partner-list">{response_items}</div>
+  </section>
+  <section class="relief-commitment rule-section reveal">
+    <p class="section-kicker">{esc(commitment_label)}</p><p>{esc(n['commitment'])}</p>
+  </section>
+  <section class="relief-donate rule-section">
+    <div class="relief-donate-copy reveal"><p class="section-kicker">{esc(form_label)}</p><h2>{esc(donate_heading)}</h2>
+      <p>{esc(n['outro'])}</p><a class="text-link" href="/donate/">{esc(regular_label)} <span aria-hidden="true">→</span></a></div>
     <div class="donate-form reveal" id="donation-form"><div class="donate-form-heading"><p class="section-kicker">{esc(form_label)}</p><p>Processed securely by Donorbox</p></div>
       <script type="module" src="https://donorbox.org/widgets.js" async></script>
       <div class="donorbox-frame"><dbox-widget campaign="{esc(meta['earthquakeDonorboxCampaign'])}" type="donation_form" enable-auto-scroll="true"></dbox-widget></div>
@@ -917,7 +956,7 @@ def earthquake_relief():
     </div>
   </section>"""
     relief_title = "Colombia earthquake relief" if LOCALE == "en" else "Ayuda por el terremoto en Colombia"
-    write("/earthquake-relief/", f"{relief_title} | {meta['name']}", n["intro"], "/donate/", "", body)
+    write("/earthquake-relief/", f"{relief_title} | {meta['name']}", n["responseIntro"], "/earthquake-relief/", "Programs / Colombia earthquake relief", body)
 
 
 def thank_you():

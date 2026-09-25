@@ -115,8 +115,12 @@ def header(meta, active):
         program_links.append(
             f'<a href="/programs/{esc(program["slug"])}/"><span>{esc(program["name"])}</span>'
             f'<span>{esc(program["department"])} ↗</span></a>')
-    program_current = " is-current" if active == "/programs/" else ""
-    dock_program_current = ' aria-current="page"' if active == "/programs/" else ""
+    program_links.append(
+        '<a href="/earthquake-relief/"><span>Colombia earthquake relief</span>'
+        '<span>Response update ↗</span></a>')
+    program_section_paths = {"/programs/", "/earthquake-relief/"}
+    program_current = " is-current" if active in program_section_paths else ""
+    dock_program_current = ' aria-current="page"' if active in program_section_paths else ""
     dock_stories_current = ' aria-current="page"' if active == "/stories/" else ""
     dock_html = "" if active in ("/donate/", "/thank-you/") else f"""
 <nav class="mobile-action-dock" aria-label="Mobile quick access" data-mobile-dock>

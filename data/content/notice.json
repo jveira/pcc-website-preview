@@ -12,6 +12,35 @@
       "Fund locally led disaster response in Chocó, Pereira, Manizales, and Cali, guided by leaders on the ground we know and trust."
     ],
     "outro": "We'll share updates on how these funds are being used as our response takes shape. #PowerfulJuntos",
+    "responseTitle": "Colombia Earthquake Relief",
+    "responseIntro": "On Aug 10, 2026, a 7.4-magnitude earthquake hit Colombia, with the epicenter in San José del Palmar, Chocó. It affected the communities where Alpha FC's \"Un Sueño Que Construye Sueños\" runs (approximately 171 children and their families), as well as communities served by other trusted organizations in Manizales and Quibdó. Powerful Children Colombia moved quickly to support locally led relief efforts.",
+    "principlesTitle": "Our guiding principles",
+    "principles": [
+      {"title": "Trusted local leadership", "body": "We channel support through trusted partners already working directly in these communities."},
+      {"title": "Flexibility over rigidity", "body": "Needs are evolving week to week. We adjust where and how we help as the situation changes rather than locking into a fixed plan up front."},
+      {"title": "Transparency with our community", "body": "We share what we're doing and why on roughly the same timeline we're doing it."},
+      {"title": "Long-term continuity over one-off relief", "body": "Every dollar of emergency funding is also a chance to deepen a relationship. Where a community is ready, we seek a path from immediate relief to sustained support for partner-led initiatives aligned with PCC's arts, sports, and education mission, following the partner's priorities and timeline."}
+    ],
+    "responseSectionTitle": "Our response",
+    "responses": [
+      {
+        "name": "Alpha FC",
+        "location": "Pereira, Risaralda",
+        "href": "https://www.instagram.com/alphafutsalclub/",
+        "body": "A long-time partner of PCC. Emergency funds have supported the 21 families most affected (approximately 90 people) in Taparcal and Málaga with groceries, blankets, pillows, and other essentials. PCC has also extended Phase 4 of Un Sueño Que Construye Sueños through the end of 2026 to focus on post-earthquake recovery, restoring routines, safe spaces, and emotional wellbeing through the program's existing athletic, mental health, and nutritional structure."
+      },
+      {
+        "name": "Cultura Viva via Fundación Ideamos",
+        "location": "Bajo Andes, Manizales, Caldas",
+        "body": "Cultura Viva works to strengthen community through art, culture, sport, and environmental initiatives, creating spaces of discovery and transformation for a population largely affected by violence, poverty, and displacement. Emergency funds have supported ollas comunitarias (community kitchens) and construction materials for damaged homes."
+      },
+      {
+        "name": "Espíritu Indomable",
+        "location": "Quibdó, Chocó",
+        "body": "Based in one of the regions hit hardest by the earthquake, and among the most difficult to reach given its remote geography and ongoing armed conflict, Espíritu Indomable empowers Afro-Colombian and Indigenous communities through sports, education, health, and food security. Initial emergency funds covered food, construction materials, and other essentials. As part of recovery, the foundation is rebuilding the community's Tejido Social y Bienestar (Social Fabric & Wellbeing), working in 11 communities across Quibdó to implement four programs that reach at least 30 participants per community, with a focus on literature, community, peace, and other life skills."
+      }
+    ],
+    "commitment": "Recovery from an earthquake of this scale doesn't happen in weeks. It's a long-term road, and PCC is committed to walking it alongside our partners for as long as these communities need us. We'll continue to communicate regularly with each partner to identify needs as they recover and rebuild.",
     "cta": "Support earthquake relief",
     "ctaHref": "/earthquake-relief/"
   },
@@ -26,6 +55,35 @@
       "Financiar la respuesta local al desastre en Chocó, Pereira, Manizales y Cali, guiada por líderes en el territorio que conocemos y en quienes confiamos."
     ],
     "outro": "Compartiremos actualizaciones sobre cómo se utilizan estos fondos a medida que nuestra respuesta tome forma. #PowerfulJuntos",
+    "responseTitle": "Respuesta al terremoto en Colombia",
+    "responseIntro": "El 10 de agosto de 2026, un terremoto de magnitud 7,4 sacudió Colombia, con epicentro en San José del Palmar, Chocó. Afectó a las comunidades donde se desarrolla Un Sueño Que Construye Sueños de Alpha FC (aproximadamente 171 niños y sus familias), así como a comunidades acompañadas por otras organizaciones de confianza en Manizales y Quibdó. Powerful Children Colombia actuó rápidamente para apoyar esfuerzos de respuesta liderados desde los territorios.",
+    "principlesTitle": "Nuestros principios",
+    "principles": [
+      {"title": "Liderazgo local de confianza", "body": "Canalizamos el apoyo a través de organizaciones aliadas que ya trabajan directamente en estas comunidades."},
+      {"title": "Flexibilidad ante una situación cambiante", "body": "Las necesidades cambian semana a semana. Ajustamos dónde y cómo ayudamos a medida que evoluciona la situación, en lugar de fijar desde el comienzo un plan rígido."},
+      {"title": "Transparencia con nuestra comunidad", "body": "Compartimos lo que estamos haciendo y por qué, casi al mismo tiempo en que lo llevamos a cabo."},
+      {"title": "Continuidad a largo plazo, no ayuda aislada", "body": "Cada peso destinado a la emergencia también permite profundizar una relación. Cuando una comunidad está preparada, buscamos pasar de la atención inmediata al apoyo sostenido de iniciativas lideradas por nuestras organizaciones aliadas y alineadas con la misión de PCC en arte, deporte y educación, respetando sus prioridades y sus tiempos."}
+    ],
+    "responseSectionTitle": "Nuestra respuesta",
+    "responses": [
+      {
+        "name": "Alpha FC",
+        "location": "Pereira, Risaralda",
+        "href": "https://www.instagram.com/alphafutsalclub/",
+        "body": "Aliado de PCC desde hace varios años. Los fondos de emergencia han apoyado a las 21 familias más afectadas (aproximadamente 90 personas) en Taparcal y Málaga con mercados, cobijas, almohadas y otros artículos esenciales. PCC también extendió la Fase 4 de Un Sueño Que Construye Sueños hasta finales de 2026 para enfocarse en la recuperación después del terremoto, restableciendo rutinas, espacios seguros y bienestar emocional mediante la estructura deportiva, de salud mental y nutricional que ya tiene el programa."
+      },
+      {
+        "name": "Cultura Viva a través de Fundación Ideamos",
+        "location": "Bajo Andes, Manizales, Caldas",
+        "body": "Cultura Viva fortalece la comunidad mediante iniciativas de arte, cultura, deporte y medioambiente, creando espacios de descubrimiento y transformación para una población afectada en gran medida por la violencia, la pobreza y el desplazamiento. Los fondos de emergencia han apoyado ollas comunitarias y materiales de construcción para viviendas dañadas."
+      },
+      {
+        "name": "Espíritu Indomable",
+        "location": "Quibdó, Chocó",
+        "body": "Ubicada en una de las regiones más golpeadas por el terremoto, y entre las más difíciles de alcanzar por su geografía remota y el conflicto armado, Espíritu Indomable fortalece a comunidades afrocolombianas e indígenas mediante el deporte, la educación, la salud y la seguridad alimentaria. Los primeros fondos de emergencia cubrieron alimentos, materiales de construcción y otros artículos esenciales. Como parte de la recuperación, la fundación trabaja ahora en reconstruir el Tejido Social y Bienestar de la comunidad, con cuatro programas en 11 comunidades de Quibdó que llegarán al menos a 30 participantes por comunidad y se enfocarán en literatura, comunidad, paz y otras habilidades para la vida."
+      }
+    ],
+    "commitment": "La recuperación después de un terremoto de esta magnitud no ocurre en semanas. Es un camino de largo plazo, y PCC se compromete a recorrerlo junto a nuestras organizaciones aliadas durante el tiempo que estas comunidades nos necesiten. Seguiremos comunicándonos regularmente con cada organización para identificar sus necesidades mientras se recuperan y reconstruyen.",
     "cta": "Apoya la respuesta al terremoto",
     "ctaHref": "/earthquake-relief/"
   }
