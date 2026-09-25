@@ -901,9 +901,8 @@ def earthquake_relief():
     relief_donate_label = "Donate to earthquake relief" if LOCALE == "en" else "Dona para esta emergencia"
     fallback = "If the form does not load, donate directly on Donorbox." if LOCALE == "en" else "Si el formulario no carga, dona directamente en Donorbox."
     principles = "".join(f"""
-      <li class="relief-principle reveal"><span class="relief-index">{index:02d}</span>
-        <div><h3>{esc(item['title'])}</h3><p>{esc(item['body'])}</p></div></li>"""
-        for index, item in enumerate(n["principles"], 1))
+      <li class="relief-principle reveal"><div><h3>{esc(item['title'])}</h3><p>{esc(item['body'])}</p></div></li>"""
+        for item in n["principles"])
     response_items = []
     for index, item in enumerate(n["responses"], 1):
         name = esc(item["name"])
@@ -915,8 +914,7 @@ def earthquake_relief():
             program_link = f'<a class="relief-partner-link" href="/programs/alpha-fc/">{esc(label)} <span aria-hidden="true">→</span></a>'
         response_items.append(f"""
       <article class="relief-partner reveal" id="response-{index}">
-        <div class="relief-partner-heading"><span class="relief-index">{index:02d}</span>
-          <div><h3>{name}</h3><p>{esc(item['location'])}</p></div></div>
+        <div class="relief-partner-heading"><div><h3>{name}</h3><p>{esc(item['location'])}</p></div></div>
         <div class="relief-partner-copy"><p>{es(item['body'])}</p>{program_link}</div>
       </article>""")
     response_items = "".join(response_items)
@@ -936,11 +934,11 @@ def earthquake_relief():
     <a href="#principles">{esc(n['principlesTitle'])}</a><a href="#response">{esc(n['responseSectionTitle'])}</a><a href="#donation-form">{esc(relief_donate_label)}</a>
   </nav>
   <section class="relief-principles rule-section" id="principles">
-    <header class="relief-section-heading reveal"><p class="section-kicker">01</p><h2>{esc(n['principlesTitle'])}</h2></header>
+    <header class="relief-section-heading reveal"><h2>{esc(n['principlesTitle'])}</h2></header>
     <ol class="relief-principle-list">{principles}</ol>
   </section>
   <section class="relief-response rule-section" id="response">
-    <header class="relief-section-heading reveal"><p class="section-kicker">02</p><h2>{esc(n['responseSectionTitle'])}</h2></header>
+    <header class="relief-section-heading reveal"><h2>{esc(n['responseSectionTitle'])}</h2></header>
     <div class="relief-partner-list">{response_items}</div>
   </section>
   <section class="relief-commitment rule-section reveal">

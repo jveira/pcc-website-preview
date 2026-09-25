@@ -554,6 +554,8 @@ def gate_product_ux(pages, failures):
             failures.append(f"[product-ux] {rel}: expected one Donorbox widget loader and form")
     for rel in ("earthquake-relief/index.html", "es/earthquake-relief/index.html"):
         page = rendered.get(rel, "")
+        if 'class="relief-index"' in page or '<p class="section-kicker">01</p>' in page or '<p class="section-kicker">02</p>' in page:
+            failures.append(f"[product-ux] {rel}: decorative numbering is not allowed on editorial sections")
         if 'campaign="powerful-children-colombia-donation-form"' in page:
             failures.append(f"[product-ux] {rel}: regular Donorbox campaign replaced emergency giving")
         if page.count("https://donorbox.org/widgets.js") != 1 or page.count("<dbox-widget ") != 1:
