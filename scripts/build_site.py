@@ -923,11 +923,11 @@ def earthquake_relief():
     donate_heading = "Help communities recover and rebuild" if LOCALE == "en" else "Ayuda a las comunidades a recuperarse y reconstruir"
     commitment_label = "Long-term commitment" if LOCALE == "en" else "Compromiso a largo plazo"
     body = f"""
-  <section class="relief-report-hero rule-section">
+  <section class="relief-report-hero rule-section" data-dock-occlusion>
     <div class="relief-report-title reveal"><p class="section-kicker">{esc(kicker)}</p><h1>{esc(n['responseTitle'])}</h1></div>
     <div class="relief-report-intro reveal"><p class="section-kicker">{esc(overview_label)}</p>
       <p>{es(n['responseIntro'])}</p>
-      <div class="masthead-actions" data-dock-occlusion><a class="btn" href="#response">{esc(overview_cta)}</a><a class="text-link" href="#donation-form" data-relief-form-link>{esc(relief_donate_label)} <span aria-hidden="true">↓</span></a></div>
+      <div class="masthead-actions"><a class="btn" href="#response">{esc(overview_cta)}</a><a class="text-link" href="#donation-form" data-relief-form-link>{esc(relief_donate_label)} <span aria-hidden="true">↓</span></a></div>
     </div>
   </section>
   <nav class="relief-local-nav meta" aria-label="{esc(n['responseTitle'])}">
