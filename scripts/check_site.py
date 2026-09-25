@@ -513,7 +513,7 @@ def gate_product_ux(pages, failures):
                                            "21 families most affected", "11 communities across Quibdó",
                                            "#PowerfulJuntos", "Make a general donation"],
         "es/earthquake-relief/index.html": ["Respuesta al terremoto en Colombia",
-                                              "Nuestros principios", "Nuestra respuesta",
+                                              "Lo que guía nuestra respuesta", "Así estamos apoyando",
                                               'campaign="colombia-earthquake-relief"',
                                               'href="#donation-form" data-relief-form-link', "Dona para esta emergencia",
                                               "21 familias más afectadas", "11 comunidades de Quibdó",

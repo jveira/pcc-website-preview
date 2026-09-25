@@ -896,7 +896,7 @@ def donate():
 def earthquake_relief():
     n = NOTICE[LOCALE]
     kicker = "Earthquake relief" if LOCALE == "en" else "Respuesta al terremoto"
-    form_label = "Emergency donation form" if LOCALE == "en" else "Formulario para la emergencia"
+    form_label = "Emergency donation form" if LOCALE == "en" else "Donaciones para la emergencia"
     regular_label = "Make a general donation" if LOCALE == "en" else "Haz una donación general"
     relief_donate_label = "Donate to earthquake relief" if LOCALE == "en" else "Dona para esta emergencia"
     fallback = "If the form does not load, donate directly on Donorbox." if LOCALE == "en" else "Si el formulario no carga, dona directamente en Donorbox."
@@ -918,10 +918,10 @@ def earthquake_relief():
         <div class="relief-partner-copy"><p>{es(item['body'])}</p>{program_link}</div>
       </article>""")
     response_items = "".join(response_items)
-    overview_label = "What happened" if LOCALE == "en" else "Qué ocurrió"
-    overview_cta = "See our response" if LOCALE == "en" else "Conoce nuestra respuesta"
-    donate_heading = "Help communities recover and rebuild" if LOCALE == "en" else "Ayuda a las comunidades a recuperarse y reconstruir"
-    commitment_label = "Long-term commitment" if LOCALE == "en" else "Compromiso a largo plazo"
+    overview_label = "What happened" if LOCALE == "en" else "Qué pasó"
+    overview_cta = "See our response" if LOCALE == "en" else "Conoce cómo estamos ayudando"
+    donate_heading = "Help communities recover and rebuild" if LOCALE == "en" else "Apoya la recuperación y la reconstrucción"
+    commitment_label = "Long-term commitment" if LOCALE == "en" else "Seguimos presentes"
     body = f"""
   <section class="relief-report-hero rule-section" data-dock-occlusion>
     <div class="relief-report-title reveal"><p class="section-kicker">{esc(kicker)}</p><h1>{esc(n['responseTitle'])}</h1></div>
